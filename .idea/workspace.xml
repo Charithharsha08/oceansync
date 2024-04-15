@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="add pdi-logo.png">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/db/DbConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/bg-removed-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/log-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/padlock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/css/LoginFormDesign.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" afterDir="false" />
+    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend in LoginFormController">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/diving-man.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/css/LoginFormDesign.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/css/Design.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -51,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/charith/IdeaProjects/oceansync/src/main/resources/view/asserts/icon",
+    "last_opened_file_path": "/home/charith/IdeaProjects/oceansync/src/main/resources/view/asserts/icon/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -66,8 +60,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon" />
       <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,6 +80,7 @@
       <workItem from="1713098588877" duration="3569000" />
       <workItem from="1713147707750" duration="4480000" />
       <workItem from="1713163851622" duration="5193000" />
+      <workItem from="1713170241417" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -119,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713163890405</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create backend in LoginFormController">
+      <option name="closed" value="true" />
+      <created>1713170447220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713170447220</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +132,8 @@
     <MESSAGE value="change vcs" />
     <MESSAGE value="add icon and bg image" />
     <MESSAGE value="add pdi-logo.png" />
-    <option name="LAST_COMMIT_MESSAGE" value="add pdi-logo.png" />
+    <MESSAGE value="create backend in LoginFormController" />
+    <option name="LAST_COMMIT_MESSAGE" value="create backend in LoginFormController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
