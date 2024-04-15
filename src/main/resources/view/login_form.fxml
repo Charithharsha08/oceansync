@@ -10,13 +10,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@css/LoginFormDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.LoginFormController">
    <children>
-      <Label layoutX="354.0" layoutY="160.0" text="User name" />
-      <Label layoutX="354.0" layoutY="213.0" text="Password" />
-      <TextField layoutX="354.0" layoutY="176.0" promptText="\@Admin" />
-      <TextField layoutX="354.0" layoutY="229.0" promptText="#Password" />
-      <JFXButton buttonType="RAISED" layoutX="354.0" layoutY="273.0" prefHeight="24.0" prefWidth="171.0" style="-fx-background-color: blue;" text="Login">
+      <Label layoutX="385.0" layoutY="161.0" text="User name" />
+      <Label layoutX="384.0" layoutY="216.0" text="Password" />
+      <TextField fx:id="txtusername" layoutX="361.0" layoutY="177.0" promptText="\@Admin" />
+      <TextField fx:id="txtpassword" layoutX="361.0" layoutY="234.0" promptText="#Password" />
+      <JFXButton buttonType="RAISED" layoutX="362.0" layoutY="274.0" onAction="#btnLoginOnAction" prefHeight="24.0" prefWidth="171.0" styleClass="login-button" stylesheets="@css/LoginFormDesign.css" text="Login" textFill="WHITE">
          <effect>
             <ColorInput paint="#e40000" />
          </effect></JFXButton>
@@ -27,7 +27,7 @@
       </ImageView>
       <ImageView fitHeight="65.0" fitWidth="54.0" layoutX="341.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asserts/icon/images/319552667_3354582354762621_5823268597101255985_n.jpg" />
+            <Image url="@asserts/icon/images/bg-removed-logo.png" />
          </image>
       </ImageView>
       <Label layoutX="403.0" layoutY="36.0" text="Submarine">
@@ -45,7 +45,7 @@
             <Font size="11.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="475.0" layoutY="310.0" text="Register now">
+      <Hyperlink layoutX="475.0" layoutY="310.0" onAction="#linkRegistrationOnAction" text="Register now">
          <font>
             <Font size="11.0" />
          </font>
@@ -70,5 +70,20 @@
             <Font name="Open Sans Extrabold" size="17.0" />
          </font>
       </Label>
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="362.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="20.0" fitWidth="21.0" layoutX="361.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/padlock.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="20.0" layoutX="468.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" styleClass="background">
+         <image>
+            <Image url="@asserts/icon/log-in.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
