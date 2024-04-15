@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.oceansync.controller.LoginFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.LoginFormController">
+   <children>
+      <Label layoutX="373.0" layoutY="133.0" text="User name" />
+      <Label layoutX="373.0" layoutY="186.0" text="Password" />
+      <TextField layoutX="373.0" layoutY="149.0" promptText="\@Admin" />
+      <TextField layoutX="373.0" layoutY="202.0" promptText="#Password" />
+      <JFXButton buttonType="RAISED" layoutX="373.0" layoutY="246.0" prefHeight="24.0" prefWidth="171.0" text="Login" />
+      <ImageView fitHeight="401.0" fitWidth="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/images/428898451_2569332726790245_4170933969639154257_n.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="54.0" layoutX="373.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/images/319552667_3354582354762621_5823268597101255985_n.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="437.0" layoutY="37.0" text="Submarine">
+         <font>
+            <Font name="Open Sans Extrabold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="64.0" text="Diving Center">
+         <font>
+            <Font name="Open Sans Extrabold" size="18.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
