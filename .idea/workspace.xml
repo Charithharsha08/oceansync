@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend in RegistrationFormController">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/activity.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +87,7 @@
       <workItem from="1713187243960" duration="4998000" />
       <workItem from="1713194503115" duration="463000" />
       <workItem from="1713197054709" duration="130000" />
+      <workItem from="1713252551243" duration="10335000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
