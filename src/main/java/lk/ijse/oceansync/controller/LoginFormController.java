@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.oceansync.db.DbConnection;
 
@@ -21,11 +22,12 @@ public class LoginFormController {
     private TextField txtpassword;
 
     @FXML
-    private TextField txtusername;
+    private TextField txtuserid;
+    public AnchorPane rootNode;
 
     @FXML
     private void btnLoginOnAction(ActionEvent event) {
-        String userId = txtusername.getText();
+        String userId = txtuserid.getText();
         String pw = txtpassword.getText();
 
         try {
@@ -36,7 +38,7 @@ public class LoginFormController {
     }
 
     private void checkCredential(String userId, String pw) throws Exception {
-        String sql = "SELECT user_id, password FROM users WHERE user_id = ?";
+        String sql = "SELECT userId, password FROM user WHERE userId = ?";
 
         Connection connection = DbConnection.getInstance().getConnection();
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -44,16 +46,27 @@ public class LoginFormController {
 
         ResultSet resultSet = pstm.executeQuery();
         if(resultSet.next()) {
-            String dbPw = resultSet.getString(3);
+            String dbPw = resultSet.getString(2);
 
             if(dbPw.equals(pw)) {
-               // navigateToTheDashboard();
+                navigateToTheDashboard();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Password is incorrect!").show();
             }
         } else {
             new Alert(Alert.AlertType.INFORMATION, "user id not found!").show();
         }
+    }
+
+    private void navigateToTheDashboard() throws IOException {
+        AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/dashboard_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+
+        Stage stage = (Stage) this.rootNode.getScene().getWindow();
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.setTitle("Dashboard Form");
     }
 
     public void linkRegistrationOnAction(ActionEvent actionEvent) throws IOException {
