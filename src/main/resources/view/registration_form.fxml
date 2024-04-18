@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@css/RegistrationFormDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.RegistrationFormController">
+<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../css/RegistrationFormDesign.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.RegistrationFormController">
    <children>
       <ImageView fitHeight="425.0" fitWidth="712.0" layoutX="-42.0" layoutY="4.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asserts/icon/images/diving-man.jpg" />
+            <Image url="@../asserts/icon/images/diving-man.jpg" />
          </image>
       </ImageView>
       <Label layoutX="75.0" layoutY="24.0" prefHeight="36.0" prefWidth="521.0" text="Welcome To Submarine Diving Center . . .">
@@ -37,7 +37,7 @@
       <Label layoutX="73.0" layoutY="224.0" text="User ID" />
       <Label layoutX="75.0" layoutY="162.0" text="Name" />
       <Label layoutX="341.0" layoutY="224.0" text="Password" />
-      <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="315.0" onAction="#btnRegisterOnAction" prefHeight="34.0" prefWidth="168.0" stylesheets="@css/Design.css" text="Register Now" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="250.0" layoutY="315.0" onAction="#btnRegisterOnAction" prefHeight="34.0" prefWidth="168.0" stylesheets="@../css/Design.css" text="Register Now" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

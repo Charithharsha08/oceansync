@@ -61,11 +61,20 @@ public class DashboardFormController {
         this.centerNode.getChildren().add(employeePane);
     }
 
-    @FXML
-    void btnHomeOnAction(ActionEvent event) throws IOException {
+    public void initialize() throws IOException {
+        LoadHomeForm();
+    }
+
+    private void LoadHomeForm() throws IOException {
+
         AnchorPane homePane = FXMLLoader.load(this.getClass().getResource("/view/home_form.fxml"));
         this.centerNode.getChildren().clear();
         this.centerNode.getChildren().add(homePane);
+    }
+
+    @FXML
+    void btnHomeOnAction(ActionEvent event) throws IOException {
+       LoadHomeForm();
     }
 
     @FXML

@@ -51,11 +51,11 @@
 }
 .pane_1{
     -fx-background-color:#748CF1;
-    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-width: 1px 1px 1px 1px;
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-border-style: solid;
-    -fx-border-color: #748CF1;
+    -fx-border-color: #000000;
 }
 .progress{
     -fx-background-color:#ffffff;
@@ -67,7 +67,7 @@
 }
 .pane_11{
     -fx-background-color:#ffffff;
-    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-width: 1px 1px 1px 1px;
     -fx-border-radius: 16px;
     -fx-background-radius: 16px;
     -fx-border-style: solid;

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.ActivityFormController">
+<AnchorPane prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.ActivityFormController">
    <children>
       <Label layoutX="80.0" layoutY="37.0" text="ACTIVITY MANAGEMENT">
          <font>
@@ -18,7 +18,7 @@
       </Label>
       <ImageView fitHeight="49.0" fitWidth="66.0" layoutX="27.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asserts/icon/images/pngegg.png" />
+            <Image url="@../asserts/icon/images/pngegg.png" />
          </image>
       </ImageView>
       <Label layoutX="37.0" layoutY="91.0" prefHeight="18.0" prefWidth="95.0" text="Activity Id " />
@@ -29,11 +29,11 @@
       <TextField layoutX="37.0" layoutY="171.0" />
       <Label layoutX="218.0" layoutY="147.0" prefHeight="18.0" prefWidth="71.0" text="Location" />
       <TextField layoutX="218.0" layoutY="172.0" />
-      <Label layoutX="37.0" layoutY="213.0" prefHeight="18.0" prefWidth="95.0" text="Employee Id" />
+      <Label layoutX="37.0" layoutY="213.0" prefHeight="18.0" prefWidth="95.0" text="Cost" />
       <Label layoutX="217.0" layoutY="214.0" prefHeight="18.0" prefWidth="95.0" text="Payment Id" />
-      <JFXButton layoutX="246.0" layoutY="286.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@css/Design.css" text="Save" />
-      <JFXButton layoutX="325.0" layoutY="286.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Clear" />
-      <ComboBox layoutX="37.0" layoutY="241.0" prefWidth="150.0" />
+      <JFXButton layoutX="246.0" layoutY="286.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
+      <JFXButton layoutX="325.0" layoutY="286.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
       <ComboBox layoutX="218.0" layoutY="240.0" prefWidth="150.0" />
+      <TextField layoutX="37.0" layoutY="240.0" />
    </children>
 </AnchorPane>

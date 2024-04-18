@@ -9,80 +9,71 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.DashboardFormController">
+<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.DashboardFormController">
    <children>
       <VBox prefHeight="400.0" prefWidth="169.0">
          <children>
-            <AnchorPane fx:id="side_ankerpane" prefHeight="400.0" prefWidth="166.0" styleClass="side_ankerpane" stylesheets="@css/Design.css">
+            <AnchorPane fx:id="side_ankerpane" prefHeight="400.0" prefWidth="166.0" styleClass="side_ankerpane" stylesheets="@../css/Design.css">
                <children>
-                  <Pane fx:id="inner_pane" layoutX="8.0" layoutY="7.0" prefHeight="54.0" prefWidth="153.0" styleClass="inner_pane" stylesheets="@css/Design.css">
+                  <Pane fx:id="inner_pane" layoutX="8.0" layoutY="7.0" prefHeight="54.0" prefWidth="153.0" styleClass="inner_pane" stylesheets="@../css/Design.css">
                      <children>
                         <ImageView fitHeight="44.0" fitWidth="55.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@asserts/icon/images/bg-removed-logo.png" />
+                              <Image url="@../asserts/icon/images/bg-removed-logo.png" />
                            </image>
                         </ImageView>
-                        <AnchorPane fx:id="mostInnerPane" layoutX="109.0" layoutY="5.0" prefHeight="44.0" prefWidth="37.0" styleClass="most_inner_pane" stylesheets="@css/Design.css">
-                           <children>
-                              <ImageView fitHeight="34.0" fitWidth="23.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../../../../Downloads/burger-bar.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                        <Label layoutX="57.0" layoutY="16.0" text="Submarine">
+                        <Label layoutX="57.0" layoutY="13.0" prefHeight="12.0" prefWidth="74.0" text="Submarine">
                            <font>
-                              <Font name="Open Sans Extrabold" size="8.0" />
+                              <Font name="Open Sans Extrabold" size="13.0" />
                            </font>
                         </Label>
-                        <Label layoutX="55.0" layoutY="25.0" text="Diving Center">
+                        <Label layoutX="57.0" layoutY="27.0" prefHeight="11.0" prefWidth="74.0" text="Diving Center">
                            <font>
-                              <Font name="Open Sans Extrabold" size="7.0" />
+                              <Font name="Open Sans Extrabold" size="10.0" />
                            </font>
                         </Label>
                      </children>
                   </Pane>
-                  <JFXButton fx:id="btnHomeOnAction" buttonType="RAISED" layoutX="14.0" layoutY="79.0" onAction="#btnHomeOnAction" prefHeight="23.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Home" textAlignment="RIGHT" />
-                  <JFXButton layoutX="14.0" layoutY="115.0" onAction="#btnStockOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Stock" />
-                  <JFXButton layoutX="14.0" layoutY="152.0" onAction="#btnEmopoleeOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="  Employee" />
-                  <JFXButton layoutX="14.0" layoutY="189.0" onAction="#btnCustomerOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="  Customer" />
+                  <JFXButton fx:id="btnHomeOnAction" buttonType="RAISED" layoutX="14.0" layoutY="79.0" onAction="#btnHomeOnAction" prefHeight="23.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Home" textAlignment="RIGHT" />
+                  <JFXButton layoutX="14.0" layoutY="115.0" onAction="#btnStockOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Stock" />
+                  <JFXButton layoutX="14.0" layoutY="152.0" onAction="#btnEmopoleeOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="  Employee" />
+                  <JFXButton layoutX="14.0" layoutY="189.0" onAction="#btnCustomerOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="  Customer" />
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="39.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/home.png" />
+                        <Image url="@../asserts/icon/home.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="39.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/ready-stock.png" />
+                        <Image url="@../asserts/icon/ready-stock.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="29.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/business-people.png" />
+                        <Image url="@../asserts/icon/business-people.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="30.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/customer.png" />
+                        <Image url="@../asserts/icon/customer.png" />
                      </image>
                   </ImageView>
-                  <JFXButton layoutX="13.0" layoutY="226.0" onAction="#btnActivityOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Activity" />
+                  <JFXButton layoutX="13.0" layoutY="226.0" onAction="#btnActivityOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Activity" />
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="33.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/exercise.png" />
+                        <Image url="@../asserts/icon/exercise.png" />
                      </image>
                   </ImageView>
-                  <JFXButton layoutX="13.0" layoutY="263.0" onAction="#btnCourcesOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Cources" />
+                  <JFXButton layoutX="13.0" layoutY="263.0" onAction="#btnCourcesOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Cources" />
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="30.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/book.png" />
+                        <Image url="@../asserts/icon/book.png" />
                      </image>
                   </ImageView>
-                  <JFXButton layoutX="12.0" layoutY="300.0" onAction="#btnPaymentOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Payment" />
+                  <JFXButton layoutX="12.0" layoutY="300.0" onAction="#btnPaymentOnAction" prefHeight="28.0" prefWidth="143.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Payment" />
                   <ImageView fitHeight="31.0" fitWidth="23.0" layoutX="28.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@asserts/icon/payment-method.png" />
+                        <Image url="@../asserts/icon/payment-method.png" />
                      </image>
                   </ImageView>
                </children>

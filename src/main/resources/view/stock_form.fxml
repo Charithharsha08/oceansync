@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootnode" prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.StockFormController">
+<AnchorPane fx:id="rootnode" prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.StockFormController">
    <children>
       <Label layoutX="86.0" layoutY="38.0" text="STOCK MANAGEMENT">
          <font>
@@ -20,7 +20,7 @@
       </Label>
       <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="22.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@asserts/icon/ready-stock.png" />
+            <Image url="@../asserts/icon/ready-stock.png" />
          </image>
       </ImageView>
       <Label layoutX="32.0" layoutY="91.0" prefHeight="18.0" prefWidth="50.0" text="Item Id " />
@@ -32,8 +32,8 @@
       <TextField layoutX="216.0" layoutY="172.0" prefHeight="24.0" prefWidth="92.0" />
       <Label layoutX="321.0" layoutY="147.0" prefHeight="18.0" prefWidth="50.0" text="Qty" />
       <TextField layoutX="321.0" layoutY="172.0" prefHeight="24.0" prefWidth="63.0" />
-      <JFXButton layoutX="248.0" layoutY="205.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@css/Design.css" text="Save" />
-      <JFXButton layoutX="326.0" layoutY="205.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Clear" />
+      <JFXButton layoutX="248.0" layoutY="205.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
+      <JFXButton layoutX="326.0" layoutY="205.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
       <TableView layoutX="28.0" layoutY="251.0" prefHeight="135.0" prefWidth="376.0">
         <columns>
           <TableColumn prefWidth="75.0" text="Item Id" />
