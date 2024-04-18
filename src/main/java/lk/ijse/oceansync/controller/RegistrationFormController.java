@@ -52,24 +52,42 @@ public class RegistrationFormController {
             pstm.setObject(3, pw);
 
             if (pstm.executeUpdate() > 0) {
-                new Alert(Alert.AlertType.CONFIRMATION, "user saved!").show();
 
-//                AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/login_form.fxml"));
-//
-//                Scene scene = new Scene(rootNode);
-//
-//                Stage stage = (Stage) this.rootNode.getScene().getWindow();
-//                stage.setScene(scene);
-//                stage.centerOnScreen();
-//                stage.setTitle("Login Form");
+                    new Alert(Alert.AlertType.CONFIRMATION, "user saved!").show();
+
+
+
+
+                    AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/login_form.fxml"));
+                   // delayLoadTime();
+                    Scene scene = new Scene(rootNode);
+
+                    Stage stage = (Stage) this.rootNode.getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.centerOnScreen();
+                    stage.setTitle("Login Form");
+
+
+
 
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "something happend!").show();
 
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+
+
     }
+
+//    private void delayLoadTime() {
+//
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
 

@@ -70,15 +70,15 @@ public class LoginFormController {
     }
 
     public void linkRegistrationOnAction(ActionEvent actionEvent) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/registration_form.fxml"));
+
+
+        AnchorPane rootNode = FXMLLoader.load(this.getClass().getResource("/view/registration_form.fxml"));
 
         Scene scene = new Scene(rootNode);
-        Stage stage = new Stage();
+
+        Stage stage = (Stage) this.rootNode.getScene().getWindow();
         stage.setScene(scene);
-
-        stage.setTitle("Registration Form");
-
-        stage.show();
+        stage.setTitle("registration Form");
     }
 
 }

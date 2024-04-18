@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
@@ -31,6 +32,8 @@ public class DashboardFormController {
 
     @FXML
     private AnchorPane side_ankerpane;
+
+
 
     @FXML
     void btnActivityOnAction(ActionEvent event) throws IOException {
@@ -99,4 +102,7 @@ public class DashboardFormController {
 
     }
 
+    public void logoClick(MouseEvent mouseEvent) {
+
+    }
 }

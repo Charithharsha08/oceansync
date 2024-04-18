@@ -4,49 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend in RegistrationFormController">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/reject.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/switch.png" afterDir="false" />
+    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Activity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Stock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/book.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/book.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/burger-bar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/burger-bar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/business-people.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/business-people.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/customer.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/customer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/discount.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/discount.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/dots.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/dots.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/employees.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/employees.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/exercise.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/exercise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/home.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/319552667_3354582354762621_5823268597101255985_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/319552667_3354582354762621_5823268597101255985_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/428898451_2569332726790245_4170933969639154257_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/428898451_2569332726790245_4170933969639154257_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/Hero-interest-snorkeling2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/Hero-interest-snorkeling2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/bg-removed-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/bg-removed-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/diving (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/diving (1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/diving-man.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/diving-man.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/gesture.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/gesture.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/pdi-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/pdi-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images/pngegg.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/images/pngegg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/log-in.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/log-in.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/package.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/package.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/padlock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/padlock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/payment-method.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/payment-method.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/ready-stock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/ready-stock.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/search (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/search (1).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/shopping-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/shopping-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/asserts/icon/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/asserts/icon/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cources_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cources_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/css/Design.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/Design.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/RegistrationFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/view/home_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/home_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/payment_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/payment_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/registration_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -156,7 +125,8 @@
       <workItem from="1713420983408" duration="7009000" />
       <workItem from="1713430512038" duration="1515000" />
       <workItem from="1713437280453" duration="1850000" />
-      <workItem from="1713439901205" duration="841000" />
+      <workItem from="1713439901205" duration="910000" />
+      <workItem from="1713441231237" duration="4012000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -230,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713430147569</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="create backend">
+      <option name="closed" value="true" />
+      <created>1713440770016</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713440770016</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +220,8 @@
     <MESSAGE value="add pdi-logo.png" />
     <MESSAGE value="create backend in LoginFormController" />
     <MESSAGE value="create backend in RegistrationFormController" />
-    <option name="LAST_COMMIT_MESSAGE" value="create backend in RegistrationFormController" />
+    <MESSAGE value="create backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="create backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

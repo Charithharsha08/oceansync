@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.HomeFormController">
+<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.HomeFormController">
    <children>
       <ImageView fitHeight="409.0" fitWidth="436.0" layoutY="15.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,7 +27,7 @@
                   <Image url="@../asserts/icon/customer.png" />
                </image>
             </ImageView>
-            <Label layoutX="46.0" layoutY="74.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
+            <Label fx:id="lblCustomerCount" layoutX="46.0" layoutY="74.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Image url="@../asserts/icon/book.png" />
                </image>
             </ImageView>
-            <Label layoutX="44.0" layoutY="72.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
+            <Label fx:id="lblCourceCount" layoutX="44.0" layoutY="72.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -57,7 +57,7 @@
                   <Image url="@../asserts/icon/images/pngegg.png" />
                </image>
             </ImageView>
-            <Label layoutX="45.0" layoutY="71.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
+            <Label fx:id="lblActivityCount" layoutX="45.0" layoutY="71.0" prefHeight="51.0" prefWidth="51.0" text="10" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -75,7 +75,7 @@
             <Font name="Open Sans Extrabold" size="26.0" />
          </font>
       </Label>
-      <JFXButton layoutX="313.0" layoutY="361.0" prefHeight="26.0" prefWidth="92.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="  Exit" textAlignment="CENTER" />
+      <JFXButton layoutX="313.0" layoutY="361.0" onAction="#btnExitOnAction" prefHeight="26.0" prefWidth="92.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="  Exit" textAlignment="CENTER" />
       <ImageView fitHeight="16.0" fitWidth="18.0" layoutX="332.0" layoutY="366.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icon/switch.png" />
