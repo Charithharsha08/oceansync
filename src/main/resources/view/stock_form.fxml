@@ -24,25 +24,25 @@
          </image>
       </ImageView>
       <Label layoutX="32.0" layoutY="91.0" prefHeight="18.0" prefWidth="50.0" text="Item Id " />
-      <TextField layoutX="32.0" layoutY="116.0" />
+      <TextField fx:id="lblItemId" layoutX="32.0" layoutY="116.0" />
       <Label layoutX="221.0" layoutY="93.0" prefHeight="18.0" prefWidth="50.0" text="User ID" />
       <Label layoutX="36.0" layoutY="147.0" prefHeight="18.0" prefWidth="50.0" text="Name" />
-      <TextField layoutX="32.0" layoutY="170.0" prefHeight="24.0" prefWidth="171.0" />
+      <TextField fx:id="lblName" layoutX="32.0" layoutY="170.0" prefHeight="24.0" prefWidth="171.0" />
       <Label layoutX="216.0" layoutY="147.0" prefHeight="18.0" prefWidth="50.0" text="Type" />
-      <TextField layoutX="216.0" layoutY="172.0" prefHeight="24.0" prefWidth="92.0" />
+      <TextField fx:id="lblType" layoutX="216.0" layoutY="172.0" prefHeight="24.0" prefWidth="92.0" />
       <Label layoutX="321.0" layoutY="147.0" prefHeight="18.0" prefWidth="50.0" text="Qty" />
-      <TextField layoutX="321.0" layoutY="172.0" prefHeight="24.0" prefWidth="63.0" />
-      <JFXButton layoutX="248.0" layoutY="205.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
-      <JFXButton layoutX="326.0" layoutY="205.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
-      <TableView layoutX="28.0" layoutY="251.0" prefHeight="135.0" prefWidth="376.0">
+      <TextField fx:id="lblQty" layoutX="321.0" layoutY="172.0" prefHeight="24.0" prefWidth="63.0" />
+      <JFXButton layoutX="248.0" layoutY="205.0" onAction="#btnSaveOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
+      <JFXButton layoutX="326.0" layoutY="205.0" onAction="#btnClearOnAction" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
+      <TableView fx:id="tblStock" layoutX="28.0" layoutY="251.0" prefHeight="135.0" prefWidth="376.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Item Id" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="colItemId" prefWidth="75.0" text="Item Id" />
+          <TableColumn fx:id="ColName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="ColType" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="colQty" prefWidth="75.0" text="Qty" />
+            <TableColumn fx:id="colUserId" prefWidth="75.0" text="User Id" />
         </columns>
       </TableView>
-      <JFXComboBox layoutX="218.0" layoutY="116.0" prefHeight="24.0" prefWidth="145.0" />
+      <JFXComboBox fx:id="cmbUserId" layoutX="218.0" layoutY="116.0" onAction="#cmbUserIdOnAction" prefHeight="24.0" prefWidth="145.0" />
    </children>
 </AnchorPane>

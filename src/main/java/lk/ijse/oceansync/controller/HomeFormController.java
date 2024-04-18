@@ -14,6 +14,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class HomeFormController {
 
@@ -34,6 +36,7 @@ public class HomeFormController {
 
     private int customerCount;
     private int courcesCount;
+    private int activityCount;
 
 
     @FXML
@@ -48,12 +51,17 @@ public class HomeFormController {
     }
 
     public void initialize() {
+        setDayStatus();
         try {
             customerCount = getCustomerCount();
+            courcesCount = getCourceCount();
+            activityCount = getActivityCount();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
         setCustomerCount(customerCount);
+        setCourceCount(courcesCount);
+        setActivityCount(activityCount);
     }
 
     private void setCustomerCount(int customerCount) {
@@ -69,17 +77,52 @@ public class HomeFormController {
         ResultSet resultSet = pstm.executeQuery();
 
         int customerCount = 0;
-        if(resultSet.next()) {
+        if (resultSet.next()) {
             customerCount = resultSet.getInt("customer_count");
         }
         return customerCount;
     }
-    public void setLblCourceCount() {
-        lblCourceCount.setText(String.valueOf(courcesCount));
+
+    private void setCourceCount(int courcesCount) {
+        lblCourceCount.setText(String.valueOf(this.courcesCount));
     }
-    public void getCourceCount() {
-        String sql = "SELECT COUNT(*) AS cources_count FROM customer";
+
+    private int getCourceCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS cource_count FROM cource";
+
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        int courcesCount = 0;
+        if (resultSet.next()) {
+            courcesCount = resultSet.getInt("cource_count");
+        }
+        return courcesCount;
 
     }
 
+    private void setActivityCount(int activityCount) {
+        lblActivityCount.setText(String.valueOf(this.activityCount));
+    }
+
+    private int getActivityCount() throws SQLException {
+        String sql = "SELECT COUNT(*) AS activity_count FROM activity";
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+
+        ResultSet resultSet = pstm.executeQuery();
+
+        int activityCount = 0;
+        if (resultSet.next()) {
+            activityCount = resultSet.getInt("activity_count");
+        }
+        return activityCount;
+    }
+
+    private void setDayStatus() {
+            LocalDateTime now = LocalDateTime.now();
+            lblDayStatus.setText(String.valueOf(now));
+    }
 }
