@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend in RegistrationFormController">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DashboardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/activity.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/customer_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/dashboard_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/activity_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/cources_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/cources_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/css/Design.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/css/Design.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Charithharsha08"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Charithharsha08/oceansync.git",
+    "accountId": "06237f84-6968-4305-bbfd-f908d1fbd0ba"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -67,6 +75,14 @@
       <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,6 +104,12 @@
       <workItem from="1713194503115" duration="463000" />
       <workItem from="1713197054709" duration="130000" />
       <workItem from="1713252551243" duration="10335000" />
+      <workItem from="1713267246067" duration="357000" />
+      <workItem from="1713287282317" duration="1169000" />
+      <workItem from="1713408950033" duration="1074000" />
+      <workItem from="1713416334839" duration="42000" />
+      <workItem from="1713416545085" duration="141000" />
+      <workItem from="1713419334026" duration="1054000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -137,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713176583227</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create backend in RegistrationFormController">
+      <option name="closed" value="true" />
+      <created>1713267595474</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713267595474</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

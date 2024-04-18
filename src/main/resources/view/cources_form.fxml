@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.oceansync.controller.CourcesFormController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.CourcesFormController">
+   <children>
+      <Label layoutX="85.0" layoutY="45.0" text="COURCES MANAGEMENT">
+         <font>
+            <Font name="Open Sans Extrabold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="36.0" fitWidth="50.0" layoutX="41.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/book.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="106.0" prefHeight="18.0" prefWidth="95.0" text="Cource Id" />
+      <TextField layoutX="47.0" layoutY="126.0" prefHeight="24.0" prefWidth="335.0" />
+      <Label layoutX="47.0" layoutY="153.0" prefHeight="18.0" prefWidth="50.0" text="Name" />
+      <TextField layoutX="47.0" layoutY="178.0" prefHeight="24.0" prefWidth="335.0" />
+      <Label layoutX="47.0" layoutY="208.0" prefHeight="18.0" prefWidth="95.0" text="Duration" />
+      <TextField layoutX="47.0" layoutY="229.0" prefHeight="24.0" prefWidth="335.0" />
+      <Label layoutX="47.0" layoutY="260.0" prefHeight="18.0" prefWidth="89.0" text="Payment Id" />
+      <JFXButton layoutX="256.0" layoutY="331.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@css/Design.css" text="Save" />
+      <JFXButton layoutX="335.0" layoutY="331.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Clear" />
+      <ComboBox layoutX="47.0" layoutY="286.0" prefWidth="150.0" />
+   </children>
 </AnchorPane>

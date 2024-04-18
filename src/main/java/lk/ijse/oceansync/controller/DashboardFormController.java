@@ -40,7 +40,10 @@ public class DashboardFormController {
     }
 
     @FXML
-    void btnCourcesOnAction(ActionEvent event) {
+    void btnCourcesOnAction(ActionEvent event) throws IOException {
+        AnchorPane coursePane = FXMLLoader.load(this.getClass().getResource("/view/cources_form.fxml"));
+        this.centerNode.getChildren().clear();
+        this.centerNode.getChildren().add(coursePane);
 
     }
 
@@ -59,8 +62,10 @@ public class DashboardFormController {
     }
 
     @FXML
-    void btnHomeOnAction(ActionEvent event) {
-
+    void btnHomeOnAction(ActionEvent event) throws IOException {
+        AnchorPane homePane = FXMLLoader.load(this.getClass().getResource("/view/home_form.fxml"));
+        this.centerNode.getChildren().clear();
+        this.centerNode.getChildren().add(homePane);
     }
 
     @FXML
