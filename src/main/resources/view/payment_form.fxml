@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.oceansync.controller.PaymentFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="rootNode" prefHeight="400.0" prefWidth="1136.0" styleClass="background" stylesheets="@css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.PaymentFormController">
+   <children>
+      <Label layoutX="214.0" layoutY="28.0" text="PAYMENT MANAGEMENT">
+         <font>
+            <Font name="Open Sans Extrabold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="41.0" layoutX="158.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/payment-method.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="768.0" layoutY="76.0" prefHeight="18.0" prefWidth="90.0" text="Payment Id " />
+      <TextField layoutX="768.0" layoutY="99.0" prefHeight="24.0" prefWidth="275.0" />
+      <Label layoutX="224.0" layoutY="173.0" prefHeight="18.0" prefWidth="50.0" text="Type" />
+      <Label layoutX="53.0" layoutY="175.0" prefHeight="18.0" prefWidth="90.0" text="Amount" />
+      <TextField layoutX="52.0" layoutY="195.0" prefHeight="24.0" prefWidth="156.0" />
+      <Label layoutX="407.0" layoutY="176.0" prefHeight="18.0" prefWidth="90.0" text="Date" />
+      <TextField layoutX="406.0" layoutY="196.0" prefHeight="24.0" prefWidth="275.0" />
+      <Label layoutX="53.0" layoutY="126.0" prefHeight="18.0" prefWidth="117.0" text="Selected Activity" />
+      <JFXComboBox layoutX="52.0" layoutY="143.0" prefHeight="24.0" prefWidth="162.0" />
+      <JFXButton layoutX="937.0" layoutY="359.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@css/Design.css" text="Save" />
+      <JFXButton layoutX="1015.0" layoutY="359.0" styleClass="pane_11" stylesheets="@css/Design.css" text="Clear" />
+      <Label layoutX="226.0" layoutY="126.0" prefHeight="18.0" prefWidth="124.0" text="Selected Cource" />
+      <JFXComboBox layoutX="226.0" layoutY="143.0" prefHeight="24.0" prefWidth="156.0" />
+      <JFXButton layoutX="858.0" layoutY="359.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@css/Design.css" text="Update" />
+      <JFXComboBox layoutX="222.0" layoutY="191.0" prefHeight="24.0" prefWidth="156.0" />
+      <Label layoutX="405.0" layoutY="80.0" prefHeight="18.0" prefWidth="90.0" text="Customer Id" />
+      <Label layoutX="52.0" layoutY="80.0" prefHeight="18.0" prefWidth="134.0" text="Customer Name" />
+      <TextField layoutX="51.0" layoutY="100.0" prefHeight="24.0" prefWidth="330.0" />
+      <TextField layoutX="402.0" layoutY="100.0" prefHeight="24.0" prefWidth="275.0" />
+      <TextField layoutX="770.0" layoutY="37.0" prefHeight="24.0" prefWidth="275.0" promptText="Search Number" />
+      <ImageView fitHeight="18.0" fitWidth="31.0" layoutX="1013.0" layoutY="40.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/search%20(1).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="684.0" layoutY="96.0" prefHeight="18.0" prefWidth="49.0" styleClass="pane_1" stylesheets="@css/Design.css" text="new" />
+      <Label layoutX="771.0" layoutY="176.0" prefHeight="18.0" prefWidth="90.0" text="Time" />
+      <TextField layoutX="768.0" layoutY="197.0" prefHeight="24.0" prefWidth="275.0" />
+      <Label layoutX="405.0" layoutY="126.0" prefHeight="18.0" prefWidth="71.0" text="Stock" />
+      <JFXComboBox layoutX="403.0" layoutY="143.0" prefHeight="24.0" prefWidth="275.0" />
+      <Label layoutX="768.0" layoutY="126.0" prefHeight="18.0" prefWidth="90.0" text="Qty" />
+      <TextField layoutX="768.0" layoutY="143.0" prefHeight="24.0" prefWidth="156.0" />
+      <JFXButton layoutX="939.0" layoutY="141.0" prefHeight="28.0" prefWidth="103.0" styleClass="pane_1" stylesheets="@css/Design.css" text="      Add" textAlignment="CENTER" />
+      <TableView layoutX="51.0" layoutY="237.0" prefHeight="117.0" prefWidth="1025.0">
+        <columns>
+          <TableColumn prefWidth="113.0" text="Payment Id" />
+          <TableColumn prefWidth="141.0" text="Customer Name" />
+            <TableColumn minWidth="0.0" prefWidth="141.0" text="Activity name" />
+            <TableColumn prefWidth="59.0" text="Cost" />
+            <TableColumn prefWidth="135.0" text="Cource name" />
+            <TableColumn prefWidth="61.0" text="Cost" />
+            <TableColumn prefWidth="97.0" text="Stock" />
+            <TableColumn minWidth="0.0" prefWidth="42.0" text="Qty" />
+            <TableColumn minWidth="0.0" prefWidth="69.0" text="Amount" />
+            <TableColumn minWidth="0.0" prefWidth="82.0" text="DIscount" />
+            <TableColumn minWidth="0.0" prefWidth="84.0" text="Total" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="959.0" layoutY="141.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icon/shopping-cart.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
