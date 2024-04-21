@@ -1,0 +1,82 @@
+package lk.ijse.oceansync.model.tm;
+
+
+public class EmployeeTm {
+    private String employeeId;
+    private String name;
+    private String activity;
+    private String salary;
+    private String date;
+    private String userId;
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
+    }
+
+
+
+    public String getSalary() {
+        return salary;
+    }
+
+    public void setSalary(String salary) {
+        this.salary = salary;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public EmployeeTm(String employeeId, String name, String activity, String month, String salary, String date, String userId) {
+        this.employeeId = employeeId;
+        this.name = name;
+        this.activity = activity;
+        this.salary = salary;
+        this.date = date;
+        this.userId = userId;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeTm{" +
+                "employeeId='" + employeeId + '\'' +
+                ", name='" + name + '\'' +
+                ", activity='" + activity + '\'' +
+                ", salary='" + salary + '\'' +
+                ", date='" + date + '\'' +
+                ", userId='" + userId + '\'' +
+                '}';
+    }
+}
