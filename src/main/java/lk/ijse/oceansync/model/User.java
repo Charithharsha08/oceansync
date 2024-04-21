@@ -1,17 +1,14 @@
 package lk.ijse.oceansync.model;
 import lombok.*;
 
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 
-public class Stock {
+public class User {
 
-    private String itemId;
-    private String name;
-    private String type;
-    private String qty;
     private String userId;
-
-
+    private String userName;
+    private String password;
 }

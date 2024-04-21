@@ -16,6 +16,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFormController {
 
@@ -33,6 +35,8 @@ public class HomeFormController {
 
     @FXML
     private AnchorPane rootNode;
+
+
 
     private int customerCount;
     private int courcesCount;

@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend">
+    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend in HomeFormController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/StockRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/StockTm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/EmployeeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/EmployeeFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/HomeFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/StockFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/StockFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/employee_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/stock_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +76,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="lk.ijse.oceansync.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon" />
       <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images" />
@@ -117,7 +129,13 @@
       <workItem from="1713430512038" duration="1515000" />
       <workItem from="1713437280453" duration="1850000" />
       <workItem from="1713439901205" duration="910000" />
-      <workItem from="1713441231237" duration="8830000" />
+      <workItem from="1713441231237" duration="13644000" />
+      <workItem from="1713456376846" duration="84000" />
+      <workItem from="1713477918712" duration="6606000" />
+      <workItem from="1713503008823" duration="194000" />
+      <workItem from="1713503413446" duration="4803000" />
+      <workItem from="1713513247735" duration="6855000" />
+      <workItem from="1713631061341" duration="3877000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -207,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713446488611</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="create backend in HomeFormController">
+      <option name="closed" value="true" />
+      <created>1713451039859</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713451039859</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +246,8 @@
     <MESSAGE value="create backend in LoginFormController" />
     <MESSAGE value="create backend in RegistrationFormController" />
     <MESSAGE value="create backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="create backend" />
+    <MESSAGE value="create backend in HomeFormController" />
+    <option name="LAST_COMMIT_MESSAGE" value="create backend in HomeFormController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
