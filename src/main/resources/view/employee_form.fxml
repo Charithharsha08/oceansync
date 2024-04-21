@@ -35,7 +35,7 @@
       <JFXComboBox fx:id="cmbUserId" layoutX="226.0" layoutY="208.0" onAction="#cmbUserIdOnAction" prefHeight="24.0" prefWidth="171.0" />
       <JFXButton layoutX="265.0" layoutY="363.0" onAction="#btnSaveOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
       <JFXButton layoutX="343.0" layoutY="363.0" onAction="#btnClearOnAction" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
-      <TableView fx:id="tblStock" layoutX="16.0" layoutY="254.0" prefHeight="99.0" prefWidth="399.0">
+      <TableView fx:id="tblEmployee" layoutX="16.0" layoutY="254.0" prefHeight="99.0" prefWidth="399.0">
         <columns>
           <TableColumn fx:id="colEmployeeId" prefWidth="101.0" text="Employee Id" />
           <TableColumn fx:id="colName" prefWidth="70.0" text="Name" />

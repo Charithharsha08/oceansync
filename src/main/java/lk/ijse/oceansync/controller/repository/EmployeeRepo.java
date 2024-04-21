@@ -4,6 +4,7 @@ import lk.ijse.oceansync.db.DbConnection;
 import lk.ijse.oceansync.model.Employee;
 import lk.ijse.oceansync.model.Stock;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -91,8 +92,16 @@ public class EmployeeRepo {
         pstm.setObject(1, id);
         return pstm.executeUpdate() > 0;
     }
+        public static String currentId() throws SQLException {
+            String sql = "SELECT id FROM employee ORDER BY id desc LIMIT 1";
 
-    public static Employee employeeSearchById(String userId) {
-        return null;
-    }
+            Connection connection = DbConnection.getInstance().getConnection();
+            PreparedStatement pstm = connection.prepareStatement(sql);
+            ResultSet resultSet = pstm.executeQuery();
+
+            if(resultSet.next()) {
+                return resultSet.getString(1);
+            }
+            return null;
+        }
 }

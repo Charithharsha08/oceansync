@@ -10,10 +10,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.oceansync.controller.repository.EmployeeRepo;
 import lk.ijse.oceansync.controller.repository.UserRepo;
 import lk.ijse.oceansync.model.Employee;
-import lk.ijse.oceansync.model.Stock;
 import lk.ijse.oceansync.model.User;
 import lk.ijse.oceansync.model.tm.EmployeeTm;
-import lk.ijse.oceansync.model.tm.StockTm;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -50,7 +48,7 @@ public class EmployeeFormController {
     private Label lblId;
 
     @FXML
-    private TableView<EmployeeTm> tblStock;
+    private TableView<EmployeeTm> tblEmployee;
 
     @FXML
     private TextField txtActivity;
@@ -71,6 +69,7 @@ public class EmployeeFormController {
 
     public void initialize() {
         this.employeeIdList = getAllEmployeeId();
+        loadNextId();
         getUserId();
         setCellValue();
         loadEmployeeTable();
@@ -88,7 +87,7 @@ public class EmployeeFormController {
 
 
     private void setCellValue() {
-        colEmployeeId.setCellValueFactory(new PropertyValueFactory<>("employeeIde"));
+        colEmployeeId.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colActivity.setCellValueFactory(new PropertyValueFactory<>("activity"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
@@ -123,8 +122,8 @@ public class EmployeeFormController {
             );
             employees.add(employeeTm);
         }
-        tblStock.setItems(employees);
-        EmployeeTm selectedEmployee = tblStock.getSelectionModel().getSelectedItem();
+        tblEmployee.setItems(employees);
+        EmployeeTm selectedEmployee = tblEmployee.getSelectionModel().getSelectedItem();
     }
 
     @FXML
@@ -178,12 +177,24 @@ public class EmployeeFormController {
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+
+        String id = lblId.getText();
         String userId = cmbUserId.getValue();
         String employeeId = txtEmployeeId.getText();
         String name = txtName.getText();
         String activity = txtActivity.getText();
+        String month = txtMonth.getText();
         String salary = txtSalary.getText();
         String date = txtDate.getText();
+        Employee employee = new Employee(id,employeeId, name, activity, month ,salary, date, userId);
+        try {
+            boolean isUpdated = EmployeeRepo.employeeUpdate(employee);
+            if (isUpdated) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Employee updated!").show();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML
@@ -191,15 +202,36 @@ public class EmployeeFormController {
         String userId = cmbUserId.getValue();
 
 
-
         try {
-            Employee employee =EmployeeRepo.employeeSearchById(userId);
-           // lblUsername.setText(user.getUserName());
+            User user = UserRepo.userSearchById(userId);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
 
+        }
+        // lblUsername.setText(user.getUserName());
+
+        ;
+    }
+    private String nextId(String currentId) {
+        if(currentId != null) {
+            String[] split = currentId.split("O");
+//            System.out.println("Arrays.toString(split) = " + Arrays.toString(split));
+            int id = Integer.parseInt(split[1]);    //2
+            return "O" + ++id;
+
+        }
+        return "O1";
+    }
+
+    private void loadNextId() {
+        try {
+            String currentId = EmployeeRepo.currentId();
+            String nextId = nextId(currentId);
+
+            lblId.setText(nextId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        ;
     }
 
 }
