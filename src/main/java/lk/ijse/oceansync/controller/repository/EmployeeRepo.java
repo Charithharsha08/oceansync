@@ -53,21 +53,6 @@ public class EmployeeRepo {
         return employeeList;
     }
 
-    public static boolean stemployeeSave(Employee employee) throws SQLException {
-
-        String sql = "INSERT INTO employee VALUES(?, ?, ?, ?,?,?,?,?)";
-        PreparedStatement pstm = DbConnection.getInstance().getConnection()
-                .prepareStatement(sql);
-        pstm.setObject(1, employee.getEmployeeId());
-        pstm.setObject(2, employee.getName());
-        pstm.setObject(3, employee.getActivity());
-        pstm.setObject(4, employee.getMonth());
-        pstm.setObject(5, employee.getSalary());
-        pstm.setObject(6, employee.getDate());
-        pstm.setObject(7, employee.getUserId());
-
-        return pstm.executeUpdate() > 0;
-    }
 
     public static boolean employeeUpdate(Employee employee) throws SQLException {
 
@@ -95,18 +80,18 @@ public class EmployeeRepo {
         return pstm.executeUpdate() > 0;
     }
 
-    public static String currentId() throws SQLException {
-        String sql = "SELECT id FROM employee ORDER BY id desc LIMIT 1";
-
-        Connection connection = DbConnection.getInstance().getConnection();
-        PreparedStatement pstm = connection.prepareStatement(sql);
-        ResultSet resultSet = pstm.executeQuery();
-
-        if (resultSet.next()) {
-            return resultSet.getString(1);
-        }
-        return null;
-    }
+//    public static String currentId() throws SQLException {
+//        String sql = "SELECT id FROM employee ORDER BY id desc LIMIT 1";
+//
+//        Connection connection = DbConnection.getInstance().getConnection();
+//        PreparedStatement pstm = connection.prepareStatement(sql);
+//        ResultSet resultSet = pstm.executeQuery();
+//
+//        if (resultSet.next()) {
+//            return resultSet.getString(1);
+//        }
+//        return null;
+//    }
 
     public static Employee employeeSearchById(String id) throws SQLException {
         String sql = "SELECT * FROM employee WHERE id = ?";
@@ -130,7 +115,7 @@ public class EmployeeRepo {
 
             employee = new Employee(Uid, employeeId, name, activity, month, salary, date, userId);
         }
-        System.out.println(employee);
+        //System.out.println(employee);
         return employee;
     }
 }

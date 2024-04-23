@@ -13,12 +13,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.EmployeeFormController">
    <children>
-      <Label layoutX="97.0" layoutY="40.0" text="EMPLOYEE MANAGEMENT">
+      <Label layoutX="97.0" layoutY="35.0" text="EMPLOYEE MANAGEMENT">
          <font>
             <Font name="Open Sans Extrabold" size="21.0" />
          </font>
       </Label>
-      <ImageView fitHeight="47.0" fitWidth="41.0" layoutX="44.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="47.0" fitWidth="41.0" layoutX="44.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icon/employees.png" />
          </image>
@@ -51,7 +51,7 @@
       <Label fx:id="lblDate" layoutX="77.0" layoutY="73.0" prefHeight="16.0" prefWidth="41.0" />
       <JFXButton layoutX="187.0" layoutY="363.0" onAction="#btnDeleteOnActin" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Delete" />
       <JFXButton layoutX="109.0" layoutY="363.0" onAction="#btnUpdateOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Update" />
-      <Label layoutX="41.0" layoutY="72.0" prefHeight="18.0" prefWidth="41.0" text=" Id :-" />
+      <Label layoutX="41.0" layoutY="70.0" prefHeight="18.0" prefWidth="41.0" text=" Id :-" />
       <TextField fx:id="txtMonth" layoutX="41.0" layoutY="208.0" prefHeight="24.0" prefWidth="71.0" />
       <Label layoutX="41.0" layoutY="190.0" prefHeight="18.0" prefWidth="90.0" text="Month" />
       <TextField fx:id="txtSearch" layoutX="267.0" layoutY="11.0" prefHeight="24.0" prefWidth="79.0" />
@@ -61,6 +61,6 @@
             <Image url="@../asserts/icon/search%20(1).png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtId" layoutX="75.0" layoutY="69.0" prefHeight="15.0" prefWidth="79.0" />
+      <TextField fx:id="txtId" layoutX="75.0" layoutY="67.0" prefHeight="24.0" prefWidth="41.0" />
    </children>
 </AnchorPane>

@@ -12,5 +12,5 @@ public class Activity {
     private String name;
     private String type;
     private String location;
-    private int cost;
+    private double cost;
 }

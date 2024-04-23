@@ -2,8 +2,6 @@ package lk.ijse.oceansync.controller.repository;
 
 import lk.ijse.oceansync.db.DbConnection;
 import lk.ijse.oceansync.model.Customer;
-import lk.ijse.oceansync.model.Stock;
-import lk.ijse.oceansync.model.tm.CustomerTm;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +12,7 @@ import java.util.List;
 public class CustomerRepo {
     public static boolean customerSave(Customer customer) throws SQLException {
 
-        System.out.println(customer);
+        //System.out.println(customer);
 
         String sql = "INSERT INTO customer VALUES(?, ?, ?, ?)";
         PreparedStatement pstm = DbConnection.getInstance().getConnection()
