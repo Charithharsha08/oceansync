@@ -3,6 +3,7 @@ package lk.ijse.oceansync.controller.repository;
 import lk.ijse.oceansync.db.DbConnection;
 import lk.ijse.oceansync.model.Employee;
 import lk.ijse.oceansync.model.Stock;
+import lk.ijse.oceansync.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -48,11 +49,12 @@ public class EmployeeRepo {
             String date = resultSet.getString(7);
             String userId = resultSet.getString(8);
 
-           Employee employee = new Employee(id, employeeId, name, activity, month, salary, date, userId);
+            Employee employee = new Employee(id, employeeId, name, activity, month, salary, date, userId);
             employeeList.add(employee);
         }
         return employeeList;
     }
+
     public static boolean stemployeeSave(Employee employee) throws SQLException {
 
         String sql = "INSERT INTO employee VALUES(?, ?, ?, ?,?,?,?,?)";
@@ -68,6 +70,7 @@ public class EmployeeRepo {
 
         return pstm.executeUpdate() > 0;
     }
+
     public static boolean employeeUpdate(Employee employee) throws SQLException {
 
         String sql = "UPDATE employee SET employeeId=?, name=?, activity=?, month=?, salary=?, date=?, userId=? WHERE id=?";
@@ -84,6 +87,7 @@ public class EmployeeRepo {
 
         return pstm.executeUpdate() > 0;
     }
+
     public static boolean employeeDelete(String id) throws SQLException {
 
         String sql = "DELETE FROM employee WHERE id=?";
@@ -92,16 +96,43 @@ public class EmployeeRepo {
         pstm.setObject(1, id);
         return pstm.executeUpdate() > 0;
     }
-        public static String currentId() throws SQLException {
-            String sql = "SELECT id FROM employee ORDER BY id desc LIMIT 1";
 
-            Connection connection = DbConnection.getInstance().getConnection();
-            PreparedStatement pstm = connection.prepareStatement(sql);
-            ResultSet resultSet = pstm.executeQuery();
+    public static String currentId() throws SQLException {
+        String sql = "SELECT id FROM employee ORDER BY id desc LIMIT 1";
 
-            if(resultSet.next()) {
-                return resultSet.getString(1);
-            }
-            return null;
+        Connection connection = DbConnection.getInstance().getConnection();
+        PreparedStatement pstm = connection.prepareStatement(sql);
+        ResultSet resultSet = pstm.executeQuery();
+
+        if (resultSet.next()) {
+            return resultSet.getString(1);
         }
+        return null;
+    }
+
+    public static Employee employeeSearchById(String id) throws SQLException {
+        String sql = "SELECT * FROM employee WHERE id = ?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+
+        pstm.setObject(1, id);
+        ResultSet resultSet = pstm.executeQuery();
+
+        Employee employee = null;
+
+        if (resultSet.next()) {
+            String Uid = resultSet.getString(1);
+            String employeeId = resultSet.getString(2);
+            String name = resultSet.getString(3);
+            String activity = resultSet.getString(4);
+            String month = resultSet.getString(5);
+            String salary = resultSet.getString(6);
+            String date = resultSet.getString(7);
+            String userId = resultSet.getString(8);
+
+            employee = new Employee(Uid, employeeId, name, activity, month, salary, date, userId);
+        }
+        System.out.println(employee);
+        return employee;
+    }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -10,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="431.0" styleClass="background" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.oceansync.controller.CustomerFormController">
    <children>
@@ -25,25 +23,27 @@
          </image>
       </ImageView>
       <Label layoutX="40.0" layoutY="83.0" prefHeight="18.0" prefWidth="95.0" text="Customer Id " />
-      <TextField layoutX="40.0" layoutY="108.0" />
+      <TextField fx:id="txtCustomerId" layoutX="40.0" layoutY="108.0" prefHeight="24.0" prefWidth="159.0" />
       <Label layoutX="221.0" layoutY="84.0" prefHeight="18.0" prefWidth="50.0" text="Name" />
-      <TextField layoutX="221.0" layoutY="109.0" />
+      <TextField fx:id="txtName" layoutX="221.0" layoutY="109.0" />
       <Label layoutX="40.0" layoutY="137.0" prefHeight="18.0" prefWidth="78.0" text="Address" />
-      <TextField layoutX="40.0" layoutY="158.0" />
+      <TextField fx:id="txtAddress" layoutX="40.0" layoutY="158.0" />
       <Label layoutX="221.0" layoutY="139.0" prefHeight="18.0" prefWidth="50.0" text="Tel" />
-      <TextField layoutX="221.0" layoutY="159.0" />
-      <Label layoutX="40.0" layoutY="188.0" prefHeight="18.0" prefWidth="78.0" text="Discount" />
-      <ComboBox layoutX="40.0" layoutY="207.0" prefWidth="150.0" />
-      <JFXButton layoutX="245.0" layoutY="205.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
-      <JFXButton layoutX="323.0" layoutY="204.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
-      <TableView layoutX="28.0" layoutY="242.0" prefHeight="144.0" prefWidth="377.0">
+      <TextField fx:id="txtTel" layoutX="221.0" layoutY="159.0" />
+      <TableView fx:id="tblCustomer" layoutX="28.0" layoutY="242.0" prefHeight="144.0" prefWidth="377.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C1" />
-            <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn fx:id="colCustomerId" prefWidth="75.0" text="Customer Id" />
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="colTel" prefWidth="75.0" text="Tel" />
+            <TableColumn fx:id="colDiscount" prefWidth="75.0" text="Discount" />
         </columns>
       </TableView>
+      <JFXButton layoutX="273.0" layoutY="199.0" onAction="#btnSaveOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
+      <JFXButton layoutX="351.0" layoutY="199.0" onAction="#btnClearOnAction" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
+      <JFXButton layoutX="195.0" layoutY="199.0" onAction="#btnDeleteOnActin" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Delete" />
+      <JFXButton layoutX="117.0" layoutY="199.0" onAction="#btnUpdateOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Update" />
+      <Label layoutX="46.0" layoutY="184.0" prefHeight="18.0" prefWidth="50.0" text="User Id " />
+      <Label fx:id="lblUserId" layoutX="43.0" layoutY="205.0" prefHeight="24.0" prefWidth="63.0" />
    </children>
 </AnchorPane>

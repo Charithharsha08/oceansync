@@ -20,6 +20,9 @@ import java.util.List;
 public class EmployeeFormController {
 
     public TextField txtMonth;
+    public TableColumn colId;
+    public TextField txtSearch;
+    public TextField txtId;
     @FXML
     private JFXComboBox<String> cmbUserId;
 
@@ -69,7 +72,6 @@ public class EmployeeFormController {
 
     public void initialize() {
         this.employeeIdList = getAllEmployeeId();
-        loadNextId();
         getUserId();
         setCellValue();
         loadEmployeeTable();
@@ -87,6 +89,7 @@ public class EmployeeFormController {
 
 
     private void setCellValue() {
+        colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colEmployeeId.setCellValueFactory(new PropertyValueFactory<>("employeeId"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colActivity.setCellValueFactory(new PropertyValueFactory<>("activity"));
@@ -132,16 +135,18 @@ public class EmployeeFormController {
     }
 
     private void clearFields() {
+        txtId.setText("");
         txtActivity.setText("");
         txtDate.setText("");
         txtEmployeeId.setText("");
         txtName.setText("");
         txtSalary.setText("");
+        txtMonth.setText("");
     }
 
     @FXML
     void btnDeleteOnActin(ActionEvent event) {
-    String employeeId = txtEmployeeId.getText();
+    String employeeId = txtSearch.getText();
         try {
             EmployeeRepo.employeeDelete(employeeId);
             if (employeeId != null) {
@@ -156,7 +161,7 @@ public class EmployeeFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        String id = lblId.getText();
+        String id = txtId.getText();
         String userId = cmbUserId.getValue();
         String employeeId = txtEmployeeId.getText();
         String name = txtName.getText();
@@ -169,6 +174,7 @@ public class EmployeeFormController {
             boolean isSaved = EmployeeRepo.employeeSave(employee);
             if (isSaved) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee saved!").show();
+                clearFields();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -178,7 +184,7 @@ public class EmployeeFormController {
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
 
-        String id = lblId.getText();
+        String id = txtId.getText();
         String userId = cmbUserId.getValue();
         String employeeId = txtEmployeeId.getText();
         String name = txtName.getText();
@@ -191,6 +197,7 @@ public class EmployeeFormController {
             boolean isUpdated = EmployeeRepo.employeeUpdate(employee);
             if (isUpdated) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Employee updated!").show();
+                clearFields();
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
@@ -212,26 +219,25 @@ public class EmployeeFormController {
 
         ;
     }
-    private String nextId(String currentId) {
-        if(currentId != null) {
-            String[] split = currentId.split("O");
-//            System.out.println("Arrays.toString(split) = " + Arrays.toString(split));
-            int id = Integer.parseInt(split[1]);    //2
-            return "O" + ++id;
 
-        }
-        return "O1";
-    }
 
-    private void loadNextId() {
+    public void btnIdSearchOnAction(ActionEvent actionEvent) {
+        String employeeId = txtSearch.getText();
+        //System.out.printf(employeeId);
         try {
-            String currentId = EmployeeRepo.currentId();
-            String nextId = nextId(currentId);
-
-            lblId.setText(nextId);
+            Employee employee = EmployeeRepo.employeeSearchById(employeeId);
+            if (employee != null) {
+                txtId.setText(employee.getId());
+                txtEmployeeId.setText(employee.getEmployeeId());
+                txtName.setText(employee.getName());
+                txtActivity.setText(employee.getActivity());
+                txtMonth.setText(employee.getMonth());
+                txtSalary.setText(employee.getSalary());
+                txtDate.setText(employee.getDate());
+                cmbUserId.setValue(employee.getUserId());
+            }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
     }
-
 }

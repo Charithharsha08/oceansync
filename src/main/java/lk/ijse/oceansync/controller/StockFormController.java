@@ -91,6 +91,7 @@ public class StockFormController {
           stocks.add(stockTm);
         }
         tblStock.setItems(stocks);
+        System.out.println(stocks);
         StockTm selectedStock = tblStock.getSelectionModel().getSelectedItem();
     }
 

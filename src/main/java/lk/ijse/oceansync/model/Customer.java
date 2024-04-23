@@ -11,6 +11,4 @@ public class Customer {
     private String name;
     private String address;
     private String contact;
-    private String discountId;
-
 }

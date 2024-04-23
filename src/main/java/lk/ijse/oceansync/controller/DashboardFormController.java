@@ -105,4 +105,16 @@ public class DashboardFormController {
     public void logoClick(MouseEvent mouseEvent) {
 
     }
+
+    public void btnDiscountOnAction(ActionEvent actionEvent) throws IOException {
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/discount_form.fxml"));
+
+        Scene scene = new Scene(rootNode);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+
+        stage.setTitle("discount Form");
+
+        stage.show();
+    }
 }
