@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.oceansync.controller.repository.DiscountRepo;
 import lk.ijse.oceansync.controller.repository.StockRepo;
 import lk.ijse.oceansync.db.DbConnection;
 
@@ -15,6 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import lk.ijse.oceansync.model.Discount;
 import lk.ijse.oceansync.model.Stock;
 import lk.ijse.oceansync.model.tm.DiscountTm;
 import lombok.*;
@@ -50,65 +52,47 @@ public class DiscountFormController {
     @FXML
     private TextField txtDiscount;
 
-    private List<DiscountFormController> discountList = new ArrayList<>();
+    private List<Discount> discountList = new ArrayList<>();
 
-    DiscountFormController(String discountId, String type, int discount){
-        this.discountId = discountId;
-        this.type = type;
-        this.discount = discount;
-    }
 
 
     public void initialize() {
-       // this.discountList = getAllDiscount();
-
+    this.discountList =getAllDiscount();
         getDiscountTypes();
         setCellValue();
         loadDiscountTable();
     }
 
-
-
-    public static List<DiscountFormController> getAll() throws SQLException {
-        List<DiscountFormController> discountList = new ArrayList<>();
-        String sql = "SELECT * FROM discount";
-        PreparedStatement pstm = DbConnection.getInstance().getConnection()
-                .prepareStatement(sql);
-
-        ResultSet resultSet = pstm.executeQuery();
-        List<DiscountFormController> discountFormControllers = new ArrayList<>();
-        while (resultSet.next()){
-
-            String discountId = resultSet.getString(1);
-            String type = resultSet.getString(2);
-            int discount = resultSet.getInt(3);
-
-            DiscountFormController discountFormController = new DiscountFormController(discountId,type,discount);
-            discountList.add(discountFormController);
+    private List<Discount> getAllDiscount() {
+        List<Discount> discountList = null;
+        try {
+            discountList = DiscountRepo.getAllDiscount();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
         return discountList;
     }
 
-    private void loadDiscountTable() {
-        ObservableList<DiscountTm> discount = FXCollections.observableArrayList();
-        for (DiscountFormController discountFormController : discountList) {
-            DiscountTm discountTm = new DiscountTm(
-                    discountFormController.getDiscountId(),
-                    discountFormController.getType(),
-                    discountFormController.getDiscount()
 
+    private void loadDiscountTable() {
+        ObservableList<DiscountTm> discounts = FXCollections.observableArrayList();
+        for (Discount discount1 : discountList) {
+            DiscountTm discountTm = new DiscountTm(
+                    discount1.getDiscountId(),
+                    discount1.getType(),
+                    discount1.getDiscount()
             );
-            discount.add(discountTm);
+            discounts.add(discountTm);
         }
-        tblDiscount.setItems(discount);
-        System.out.println(discount);
+        tblDiscount.setItems(discounts);
+        //System.out.println(discount);
         DiscountTm selectedStock = tblDiscount.getSelectionModel().getSelectedItem();
-        System.out.println(selectedStock);
+       // System.out.println(selectedStock);
     }
 
     private void setCellValue() {
         colDisId.setCellValueFactory(new PropertyValueFactory<>("discountId"));
-        colType.setCellValueFactory(new PropertyValueFactory<>("localOrForeign"));
+        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
         colDis.setCellValueFactory(new PropertyValueFactory<>("discount"));
     }
 
@@ -130,7 +114,17 @@ public class DiscountFormController {
         DiscountType type = cmbType.getValue();
         String typeAsString = type.toString();
         int discount = Integer.parseInt(txtDiscount.getText());
-        discountSave(discountId, typeAsString, discount);
+        Discount discount1 = new Discount(discountId, typeAsString, discount);
+        try {
+            boolean discountSave = DiscountRepo.discountSave(discount1);
+            if (discountSave) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
+                clearFields();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+            throw new RuntimeException(e);
+        }
 
     }
 
@@ -143,52 +137,6 @@ public class DiscountFormController {
         cmbType.getItems().clear();
         for (DiscountType type : DiscountType.values()) {
             cmbType.getItems().add(type);
-        }
-
-    }
-
-    public  void discountUpdate(String discountId, String localOrForeign, int discount) throws SQLException {
-        String sql = "UPDATE discount SET type=?, discount=? WHERE id=?";
-        PreparedStatement pstm = DbConnection.getInstance().getConnection()
-                .prepareStatement(sql);
-        pstm.setObject(1, discountId);
-        pstm.setObject(2, localOrForeign);
-        pstm.setObject(3, discount);
-        if (pstm.executeUpdate() > 0){
-            new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
-            clearFields();
-        }
-    }
-
-    public  void discountDelete(String id) throws SQLException {
-        try {
-        String sql = "DELETE FROM discount WHERE id=?";
-        PreparedStatement pstm = DbConnection.getInstance().getConnection()
-                .prepareStatement(sql);
-        pstm.setObject(1, id);
-        if (pstm.executeUpdate() > 0) {
-            new Alert(Alert.AlertType.CONFIRMATION, "DELETED SUCCESSFULLY").show();
-        }
-    }catch(SQLException e){
-        new Alert(Alert.AlertType.ERROR, "Something went wrong").show();
-    }
-}
-
-    public void discountSave(String discountId, String localOrForeign, int discount) throws SQLException {
-        try {
-            String sql = "INSERT INTO discount VALUES(?, ?, ?)";
-
-            PreparedStatement pstm = DbConnection.getInstance().getConnection()
-                    .prepareStatement(sql);
-            pstm.setObject(1, discountId);
-            pstm.setObject(2, localOrForeign);
-            pstm.setObject(3, discount);
-
-            if (pstm.executeUpdate() > 0) {
-                new Alert(Alert.AlertType.CONFIRMATION, "Saved").show();
-            }
-            }catch(SQLException e){
-            new Alert(Alert.AlertType.ERROR, "Something went wrong").show();
         }
     }
 }
