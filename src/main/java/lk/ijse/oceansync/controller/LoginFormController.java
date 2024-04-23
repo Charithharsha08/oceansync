@@ -25,6 +25,8 @@ public class LoginFormController {
     private TextField txtuserid;
     public AnchorPane rootNode;
 
+    public static String[] credential = new String[3];
+
     @FXML
     private void btnLoginOnAction(ActionEvent event) {
         String userId = txtuserid.getText();
@@ -38,7 +40,7 @@ public class LoginFormController {
     }
 
     private void checkCredential(String userId, String pw) throws Exception {
-        String sql = "SELECT userId, password FROM user WHERE userId = ?";
+        String sql = "SELECT * FROM user WHERE userId = ?";
 
         Connection connection = DbConnection.getInstance().getConnection();
         PreparedStatement pstm = connection.prepareStatement(sql);
@@ -46,10 +48,14 @@ public class LoginFormController {
 
         ResultSet resultSet = pstm.executeQuery();
         if(resultSet.next()) {
-            String dbPw = resultSet.getString(2);
+            String dbPw = resultSet.getString(3);
+            String dbUn = resultSet.getString(2);
+            credential[1] = dbUn;
 
             if(dbPw.equals(pw)) {
                 navigateToTheDashboard();
+                credential[0] = userId;
+                credential[2] = pw;
             } else {
                 new Alert(Alert.AlertType.ERROR, "Password is incorrect!").show();
             }

@@ -2,8 +2,6 @@ package lk.ijse.oceansync.controller.repository;
 
 import lk.ijse.oceansync.db.DbConnection;
 import lk.ijse.oceansync.model.Employee;
-import lk.ijse.oceansync.model.Stock;
-import lk.ijse.oceansync.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
