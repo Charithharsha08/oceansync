@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="Create discount Class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/DiscountRepo.java" afterDir="false" />
+    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="Create discount DiscountFormController.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DiscountFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DiscountFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Discount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,7 @@
       <workItem from="1713799686272" duration="5303000" />
       <workItem from="1713843680563" duration="18966000" />
       <workItem from="1713865896709" duration="859000" />
-      <workItem from="1713867623146" duration="12267000" />
+      <workItem from="1713867623146" duration="13354000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -311,7 +308,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713873908893</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Create discount DiscountFormController.java">
+      <option name="closed" value="true" />
+      <created>1713882794799</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713882794799</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +336,8 @@
     <MESSAGE value="create backend in ActivityFormController" />
     <MESSAGE value="create backend in CourceRepo" />
     <MESSAGE value="Create discount Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create discount Class" />
+    <MESSAGE value="Create discount DiscountFormController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create discount DiscountFormController.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
