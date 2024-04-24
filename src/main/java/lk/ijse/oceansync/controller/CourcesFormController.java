@@ -78,9 +78,20 @@ public class CourcesFormController {
         String  duration= txtDuration.getText();
         double cost = Double.parseDouble(txtCost.getText());
         Cource cource = new Cource(courceId,name,duration,cost);
-        boolean save = false;
+
+        if (name.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter name").show();
+            return;
+        }if (duration.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter duration").show();
+            return;
+        }if (cost == 0){
+            new Alert(Alert.AlertType.ERROR, "Please enter cost").show();
+            return;
+        }
+
         try {
-            save = CourceRepo.courceUpdate(cource);
+            boolean save  = CourceRepo.courceUpdate(cource);
             if (save) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Updated").show();
                 clearFields();

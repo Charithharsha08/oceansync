@@ -125,6 +125,16 @@ public class CustomerFormController {
         String name = txtName.getText();
         String address = txtAddress.getText();
         String contact = txtTel.getText();
+        if (name.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter name").show();
+            return;
+        }if (contact.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter contact").show();
+            return;
+        }if (address.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter address").show();
+            return;
+        }
         Customer customer = new Customer(customerId,name,address,contact);
         try {
             boolean customerSaved = CustomerRepo.customerSave(customer);

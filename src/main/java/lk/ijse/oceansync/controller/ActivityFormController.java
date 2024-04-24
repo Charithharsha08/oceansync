@@ -70,6 +70,19 @@ public class ActivityFormController {
         String location = txtLocation.getText();
         double cost = Double.parseDouble(txtCost.getText());
         Activity activity = new Activity(activityId,name,type,location,cost);
+        if (name.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter name").show();
+            return;
+        }if (type.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter type").show();
+            return;
+        }if (location.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter location").show();
+            return;
+        }if (cost == 0){
+            new Alert(Alert.AlertType.ERROR, "Please enter cost").show();
+            return;
+        }
         try {
            boolean isSaved = ActivityRepo.activitySave(activity);
 

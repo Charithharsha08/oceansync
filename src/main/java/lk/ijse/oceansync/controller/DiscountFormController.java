@@ -113,6 +113,14 @@ public class DiscountFormController {
         String discountId = txtDisId.getText();
         DiscountType type = cmbType.getValue();
         String typeAsString = type.toString();
+        if (discountId.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please enter discount id").show();
+            return;
+        }
+        if (txtDiscount.getText().isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please enter discount").show();
+            return;
+        }
         int discount = Integer.parseInt(txtDiscount.getText());
         Discount discount1 = new Discount(discountId, typeAsString, discount);
         try {

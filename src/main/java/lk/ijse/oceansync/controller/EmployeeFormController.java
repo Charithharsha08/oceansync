@@ -169,6 +169,22 @@ public class EmployeeFormController {
         String month = txtMonth.getText();
         String salary = txtSalary.getText();
         String date = txtDate.getText();
+        if (name.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter name").show();
+            return;
+        }if (activity.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter activity").show();
+            return;
+        }if (month.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter month").show();
+            return;
+        }if (salary.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter salary").show();
+            return;
+        }if (date.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Please enter date").show();
+            return;
+        }
         Employee employee = new Employee(id,employeeId, name, activity, month ,salary, date, userId);
         try {
             boolean isSaved = EmployeeRepo.employeeSave(employee);
