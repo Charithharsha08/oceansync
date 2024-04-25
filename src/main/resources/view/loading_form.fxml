@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane fx:id="rootNode" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="600.0" styleClass="loading_bg" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="296.0" fitWidth="659.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/icon/images/into%20the%20deep.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="recMain" arcHeight="5.0" arcWidth="5.0" fill="#f7f7f793" height="14.0" layoutX="71.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" width="477.0" />
+      <Rectangle fx:id="recSub" arcHeight="5.0" arcWidth="5.0" fill="#1f93ffbc" height="14.0" layoutX="72.0" layoutY="261.0" stroke="BLACK" strokeType="INSIDE" styleClass="loading_bg" width="14.0" />
+      <Label layoutX="14.0" layoutY="260.0" text="Loading" textFill="WHITE" />
+      <Label fx:id="lblPrograss" layoutX="553.0" layoutY="260.0" text="10%" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -90,3 +90,7 @@
     -fx-border-style: solid;
     -fx-border-color: #353A56;
 }
+.loading_bg{
+    -fx-background-color:#49C8C6;
+
+}
