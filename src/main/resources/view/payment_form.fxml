@@ -24,52 +24,50 @@
          </image>
       </ImageView>
       <Label layoutX="768.0" layoutY="76.0" prefHeight="18.0" prefWidth="90.0" text="Payment Id " />
-      <TextField layoutX="768.0" layoutY="99.0" prefHeight="24.0" prefWidth="275.0" />
+      <TextField fx:id="txtPaymentId" layoutX="768.0" layoutY="99.0" prefHeight="24.0" prefWidth="275.0" />
       <Label layoutX="224.0" layoutY="173.0" prefHeight="18.0" prefWidth="50.0" text="Type" />
       <Label layoutX="53.0" layoutY="175.0" prefHeight="18.0" prefWidth="90.0" text="Amount" />
-      <TextField layoutX="52.0" layoutY="195.0" prefHeight="24.0" prefWidth="156.0" />
+      <TextField fx:id="txtAmount" layoutX="52.0" layoutY="195.0" prefHeight="24.0" prefWidth="156.0" />
       <Label layoutX="407.0" layoutY="176.0" prefHeight="18.0" prefWidth="90.0" text="Date" />
-      <TextField layoutX="406.0" layoutY="196.0" prefHeight="24.0" prefWidth="275.0" />
       <Label layoutX="53.0" layoutY="126.0" prefHeight="18.0" prefWidth="117.0" text="Selected Activity" />
-      <JFXComboBox layoutX="52.0" layoutY="143.0" prefHeight="24.0" prefWidth="162.0" />
-      <JFXButton layoutX="871.0" layoutY="359.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
-      <JFXButton layoutX="947.0" layoutY="359.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
+      <JFXComboBox fx:id="cmbSelectedActivity" layoutX="52.0" layoutY="143.0" onAction="#cmbSelectedActivityOnAction" prefHeight="24.0" prefWidth="162.0" />
+      <JFXButton layoutX="871.0" layoutY="359.0" onAction="#btnSaveOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Save" />
+      <JFXButton layoutX="947.0" layoutY="359.0" onAction="#btnClearOnAction" styleClass="pane_11" stylesheets="@../css/Design.css" text="Clear" />
       <Label layoutX="226.0" layoutY="126.0" prefHeight="18.0" prefWidth="124.0" text="Selected Cource" />
-      <JFXComboBox layoutX="226.0" layoutY="143.0" prefHeight="24.0" prefWidth="156.0" />
-      <JFXButton layoutX="792.0" layoutY="359.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Update" />
-      <JFXComboBox layoutX="222.0" layoutY="191.0" prefHeight="24.0" prefWidth="156.0" />
+      <JFXComboBox fx:id="cmbSelectedCource" layoutX="226.0" layoutY="143.0" onAction="#cmbSelectedCourceOnAction" prefHeight="24.0" prefWidth="156.0" />
+      <JFXButton layoutX="792.0" layoutY="359.0" onAction="#btnUpdateOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="Update" />
+      <JFXComboBox fx:id="cmbType" layoutX="222.0" layoutY="191.0" onAction="#cmbTypeOnAction" prefHeight="24.0" prefWidth="156.0" />
       <Label layoutX="405.0" layoutY="80.0" prefHeight="18.0" prefWidth="90.0" text="Customer Id" />
       <Label layoutX="52.0" layoutY="80.0" prefHeight="18.0" prefWidth="134.0" text="Customer Name" />
-      <TextField layoutX="51.0" layoutY="100.0" prefHeight="24.0" prefWidth="330.0" />
-      <TextField layoutX="402.0" layoutY="100.0" prefHeight="24.0" prefWidth="275.0" />
-      <TextField layoutX="770.0" layoutY="37.0" prefHeight="24.0" prefWidth="275.0" promptText="Search Number" />
+      <TextField fx:id="txtCustomerName" layoutX="51.0" layoutY="100.0" prefHeight="24.0" prefWidth="330.0" />
+      <TextField fx:id="txtCustomerId" layoutX="402.0" layoutY="100.0" prefHeight="24.0" prefWidth="275.0" />
+      <TextField fx:id="txtSearchTel" layoutX="770.0" layoutY="37.0" prefHeight="24.0" prefWidth="275.0" promptText="Search Number" />
       <ImageView fitHeight="18.0" fitWidth="31.0" layoutX="1013.0" layoutY="40.0" opacity="0.33" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icon/search%20(1).png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="684.0" layoutY="96.0" prefHeight="18.0" prefWidth="49.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="new" />
+      <JFXButton layoutX="684.0" layoutY="96.0" onAction="#btncreateNewCustomerOnAction" prefHeight="18.0" prefWidth="49.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="new" />
       <Label layoutX="771.0" layoutY="176.0" prefHeight="18.0" prefWidth="90.0" text="Time" />
-      <TextField layoutX="768.0" layoutY="197.0" prefHeight="24.0" prefWidth="275.0" />
       <Label layoutX="405.0" layoutY="126.0" prefHeight="18.0" prefWidth="71.0" text="Stock" />
-      <JFXComboBox layoutX="403.0" layoutY="143.0" prefHeight="24.0" prefWidth="275.0" />
+      <JFXComboBox fx:id="cmbStock" layoutX="403.0" layoutY="143.0" onAction="#cmbStockOnAction" prefHeight="24.0" prefWidth="275.0" />
       <Label layoutX="768.0" layoutY="126.0" prefHeight="18.0" prefWidth="90.0" text="Qty" />
-      <TextField layoutX="768.0" layoutY="143.0" prefHeight="24.0" prefWidth="156.0" />
-      <JFXButton layoutX="939.0" layoutY="141.0" prefHeight="28.0" prefWidth="103.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="      Add" textAlignment="CENTER" />
-      <TableView layoutX="51.0" layoutY="237.0" prefHeight="117.0" prefWidth="1008.0">
+      <TextField fx:id="txtQty" layoutX="768.0" layoutY="143.0" prefHeight="24.0" prefWidth="156.0" />
+      <JFXButton layoutX="939.0" layoutY="141.0" onAction="#btnAddOnAction" prefHeight="28.0" prefWidth="103.0" styleClass="pane_1" stylesheets="@../css/Design.css" text="      Add" textAlignment="CENTER" />
+      <TableView layoutX="51.0" layoutY="237.0" onSort="#tblPayment" prefHeight="117.0" prefWidth="995.0">
         <columns>
-          <TableColumn prefWidth="92.0" text="Payment Id" />
-          <TableColumn prefWidth="126.0" text="Customer Name" />
-            <TableColumn minWidth="0.0" prefWidth="121.0" text="Activity name" />
-            <TableColumn prefWidth="58.0" text="Cost" />
-            <TableColumn prefWidth="117.0" text="Cource name" />
-            <TableColumn prefWidth="63.0" text="Cost" />
-            <TableColumn prefWidth="89.0" text="Stock" />
-            <TableColumn minWidth="0.0" prefWidth="48.0" text="Qty" />
-            <TableColumn minWidth="0.0" prefWidth="72.0" text="Amount" />
-            <TableColumn minWidth="0.0" prefWidth="78.0" text="DIscount" />
-            <TableColumn minWidth="0.0" prefWidth="65.0" text="Total" />
-            <TableColumn minWidth="0.0" prefWidth="64.0" text="Action" />
+          <TableColumn fx:id="colPaymentId" prefWidth="92.0" text="Payment Id" />
+          <TableColumn fx:id="colCustomerName" prefWidth="126.0" text="Customer Name" />
+            <TableColumn fx:id="colActivityName" minWidth="0.0" prefWidth="121.0" text="Activity name" />
+            <TableColumn fx:id="colCost" prefWidth="58.0" text="Cost" />
+            <TableColumn fx:id="colCourceName" prefWidth="117.0" text="Cource name" />
+            <TableColumn fx:id="colCost" prefWidth="63.0" text="Cost" />
+            <TableColumn fx:id="colStock" prefWidth="89.0" text="Stock" />
+            <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="48.0" text="Qty" />
+            <TableColumn fx:id="colAmount" minWidth="0.0" prefWidth="72.0" text="Amount" />
+            <TableColumn fx:id="colDiscount" minWidth="0.0" prefWidth="78.0" text="DIscount" />
+            <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="65.0" text="Total" />
+            <TableColumn fx:id="colAction" minWidth="0.0" prefWidth="64.0" text="Action" />
         </columns>
       </TableView>
       <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="959.0" layoutY="141.0" opacity="0.65" pickOnBounds="true" preserveRatio="true">
@@ -77,11 +75,13 @@
             <Image url="@../asserts/icon/shopping-cart.png" />
          </image>
       </ImageView>
-      <JFXButton layoutX="1007.0" layoutY="359.0" prefHeight="28.0" prefWidth="71.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="    Exit" />
+      <JFXButton layoutX="1007.0" layoutY="359.0" onAction="#btnExitOnAction" prefHeight="28.0" prefWidth="71.0" styleClass="pane_11" stylesheets="@../css/Design.css" text="    Exit" />
       <ImageView fitHeight="18.0" fitWidth="28.0" layoutX="1018.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../asserts/icon/reject.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblDate" layoutX="407.0" layoutY="201.0" prefHeight="16.0" prefWidth="275.0" text="Label" />
+      <Label fx:id="lblTime" layoutX="771.0" layoutY="201.0" prefHeight="16.0" prefWidth="275.0" text="Label" />
    </children>
 </AnchorPane>
