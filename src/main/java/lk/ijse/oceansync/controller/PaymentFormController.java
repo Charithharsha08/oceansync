@@ -11,20 +11,26 @@ import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.oceansync.controller.repository.*;
-import lk.ijse.oceansync.model.Customer;
-import lk.ijse.oceansync.model.tm.CustomerTm;
+import lk.ijse.oceansync.model.*;
 import lk.ijse.oceansync.model.tm.PaymentTm;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class PaymentFormController {
 
+
+    public Label lblStockAmount;
+    public Label lblSelectedCourceCost;
+    public Label lblSelectedActivityAmount;
 
     @FXML
     private Label lblNetTotal;
@@ -34,6 +40,11 @@ public class PaymentFormController {
 
     @FXML
     private JFXComboBox<String> cmbSelectedCource;
+
+
+    @FXML
+    private JFXComboBox<String> cmbDiscount;
+
 
     @FXML
     private JFXComboBox<String> cmbStock;
@@ -110,10 +121,27 @@ public class PaymentFormController {
     private ObservableList<PaymentTm> paymentList = FXCollections.observableArrayList();
     private double netTotal = 0;
     public  void initialize(){
+        setCellValueFactory();
+//        getAllPayments();
         loadNextPaymentId();
         loadAllCources();
         loadAllActivities();
         loadAllStocks();
+        loadAllDiscounts();
+    }
+    private void setCellValueFactory() {
+        colPaymentId.setCellValueFactory(new PropertyValueFactory<>("paymentId"));
+        colCustomerName.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        colActivityName.setCellValueFactory(new PropertyValueFactory<>("activityName"));
+        colActivityCost.setCellValueFactory(new PropertyValueFactory<>("activityCost"));
+        colCourceName.setCellValueFactory(new PropertyValueFactory<>("courceName"));
+        colCourceCost.setCellValueFactory(new PropertyValueFactory<>("courceCost"));
+        colStock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+        colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
+        colAmount.setCellValueFactory(new PropertyValueFactory<>("amount"));
+        colDiscount.setCellValueFactory(new PropertyValueFactory<>("discount"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+        colAction.setCellValueFactory(new PropertyValueFactory<>("btnRemove"));
     }
 
     private void loadAllStocks() {
@@ -155,6 +183,19 @@ public class PaymentFormController {
         }
     }
 
+    private void loadAllDiscounts(){
+        ObservableList<String> discounts = FXCollections.observableArrayList();
+        try {
+            List<String> discount = DiscountRepo.getDiscount();
+            for (String name : discount) {
+                discounts.add(name);
+            }
+            cmbDiscount.setItems(discounts);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private  void loadNextPaymentId() {
         String currentId = PaymentRepo.currerntId();
         String nextId = nextId(currentId);
@@ -175,10 +216,16 @@ public class PaymentFormController {
     @FXML
     void btnAddOnAction(ActionEvent event) {
         String paymentId = lblPaymentId.getText();
-        String type = (String) cmbType.getValue();
+        String customerName = txtCustomerName.getText();
+        String activityName = (String) cmbSelectedActivity.getValue();
+        double activityCost = Double.parseDouble(lblSelectedActivityAmount.getText());
+        String courseName = (String) cmbSelectedCource.getValue();
+        double courseCost = Double.parseDouble(lblSelectedCourceCost.getText());
+        String stock = (String) cmbStock.getValue();
+        String qty = txtQty.getText();
         String amount = txtAmount.getText();
-        String date = lblDate.getText();
-        String customerId = txtCustomerId.getText();
+        // String date = lblDate.getText();
+        // String customerId = txtCustomerId.getText();
         JFXButton btnRemove = new JFXButton("remove");
         btnRemove.setCursor(Cursor.HAND);
 
@@ -196,6 +243,12 @@ public class PaymentFormController {
                 calculateNetTotal();
             }
         });
+        for (int i = 0 ; i < tblPayment.getItems().size(); i++ ){
+            if (paymentId.equals(colPaymentId.getCellData(i))){
+
+                return;
+            }
+        }
     }
 
     private void calculateNetTotal() {
@@ -210,7 +263,19 @@ public class PaymentFormController {
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
+        clearFields();
+    }
 
+    private void clearFields() {
+    txtSearchTel.setText("");
+    txtCustomerName.setText("");
+    txtQty.setText("");
+    txtAmount.setText("");
+   // txtCustomerName.requestFocus();
+    lblSelectedCourceCost.setText("");
+    lblSelectedActivityAmount.setText("");
+    lblNetTotal.setText("");
+    tblPayment.getItems().clear();
     }
 
     @FXML
@@ -220,13 +285,51 @@ public class PaymentFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
+        String paymentId = lblPaymentId.getText();
+        String type = (String) cmbType.getValue();
+        double amount = Double.parseDouble(txtAmount.getText());
+        Date date = Date.valueOf(lblDate.getText());
+        String customerName = txtCustomerName.getText();
+        String activitId = (String) cmbSelectedActivity.getValue();
+        String courceId = (String) cmbSelectedCource.getValue();
+
+        var payment = new Payment(paymentId, type, amount, date, customerName);
+
+        List<SelectedActivity> seAcList = new ArrayList<>();
+        for (int i = 0; tblPayment.getItems().size() > i; i++) {
+            PaymentTm tm = tblPayment.getItems().get(i);
+
+            SelectedActivity selectedActivity = new SelectedActivity(
+                    activitId,
+            tm.getPaymentId()
+            );
+            seAcList.add(selectedActivity);
+
+            List<SelectedCource> seCoList = new ArrayList<>();
+            for (int j = 0; tblPayment.getItems().size() > j; j++) {
+                PaymentTm tm1 = tblPayment.getItems().get(j);
+                SelectedCource selectedCource = new SelectedCource(
+                        courceId,
+                        tm1.getPaymentId()
+                );
+                seCoList.add(selectedCource);
+            }
+            PlacePayment pp = new PlacePayment(payment, seAcList, seCoList);
+            try {
+                boolean isPlaced =PlacePaymentRepo.placePayment(pp);
+                if (isPlaced){
+                    new Alert(Alert.AlertType.INFORMATION, "payment Placed").show();
+                    clearFields();
+                }else {
+                    new Alert(Alert.AlertType.INFORMATION, "payment Not Placed").show();
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
 
     }
 
-    @FXML
-    void btnUpdateOnAction(ActionEvent event) {
-
-    }
 
     @FXML
     void btncreateNewCustomerOnAction(ActionEvent event) throws IOException {
@@ -274,6 +377,7 @@ public class PaymentFormController {
 
     @FXML
     void txtCustomerNameOnAction(ActionEvent event) {
+        txtQty.requestFocus();
     }
 
 
@@ -294,6 +398,10 @@ public class PaymentFormController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+    @FXML
+    void cmbDiscountOnAction(ActionEvent event) {
+
     }
 
 

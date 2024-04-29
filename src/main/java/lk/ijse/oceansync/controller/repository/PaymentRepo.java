@@ -1,6 +1,7 @@
 package lk.ijse.oceansync.controller.repository;
 
 import lk.ijse.oceansync.db.DbConnection;
+import lk.ijse.oceansync.model.Payment;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,5 +37,20 @@ public class PaymentRepo {
             throw new RuntimeException(e);
         }
         return null;
+    }
+
+    public static boolean savePayment(Payment payment) {
+        String sql = "INSERT INTO payment VALUES (?,?,?,?)";
+        try {
+            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(sql);
+            stm.setObject(1, payment.getPaymentId());
+            stm.setObject(2, payment.getType());
+            stm.setObject(3, payment.getDate());
+            stm.setObject(4, payment.getCustomerId());
+
+            return stm.executeUpdate() > 0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
