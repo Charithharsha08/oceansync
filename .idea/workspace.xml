@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="add loading form">
+    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create loading form controller">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedCource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/loading_form.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/PaymentTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/PaymentTm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +165,8 @@
       <workItem from="1714233975699" duration="2450000" />
       <workItem from="1714323267551" duration="462000" />
       <workItem from="1714323879352" duration="739000" />
-      <workItem from="1714357484126" duration="847000" />
+      <workItem from="1714357484126" duration="4191000" />
+      <workItem from="1714364876409" duration="1552000" />
     </task>
     <task id="LOCAL-00001" summary="change vcs">
       <option name="closed" value="true" />
@@ -371,7 +376,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714025224643</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="delete loading form">
+      <option name="closed" value="true" />
+      <created>1714360878931</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1714360878931</updated>
+    </task>
+    <task id="LOCAL-00028" summary="create loading form controller">
+      <option name="closed" value="true" />
+      <created>1714360903369</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1714360903369</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +416,9 @@
     <MESSAGE value="Create Cource.java" />
     <MESSAGE value="change is empty value check" />
     <MESSAGE value="add loading form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add loading form" />
+    <MESSAGE value="delete loading form" />
+    <MESSAGE value="create loading form controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="create loading form controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

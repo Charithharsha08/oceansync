@@ -14,8 +14,8 @@
    <children>
       <Label layoutX="385.0" layoutY="161.0" text="User Id" />
       <Label layoutX="384.0" layoutY="216.0" text="Password" />
-      <TextField fx:id="txtuserid" layoutX="361.0" layoutY="177.0" promptText="\@Admin" />
-      <TextField fx:id="txtpassword" layoutX="361.0" layoutY="234.0" promptText="#Password" />
+      <TextField fx:id="txtuserid" layoutX="361.0" layoutY="177.0" onAction="#txtUserIdOnAction" promptText="\@Admin" />
+      <TextField fx:id="txtpassword" layoutX="361.0" layoutY="234.0" onAction="#txtPasswordOnAction" promptText="#Password" />
       <JFXButton buttonType="RAISED" layoutX="362.0" layoutY="274.0" onAction="#btnLoginOnAction" prefHeight="24.0" prefWidth="171.0" styleClass="login-button" stylesheets="@../css/Design.css" text="Login" textFill="WHITE">
          <effect>
             <ColorInput paint="#e40000" />

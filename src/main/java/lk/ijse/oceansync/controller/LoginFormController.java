@@ -87,6 +87,13 @@ public class LoginFormController {
         stage.setTitle("registration Form");
     }
 
+    public void txtPasswordOnAction(ActionEvent actionEvent) {
+        btnLoginOnAction(actionEvent);
+    }
+
+    public void txtUserIdOnAction(ActionEvent actionEvent) {
+        txtpassword.requestFocus();
+    }
 }
 
 
