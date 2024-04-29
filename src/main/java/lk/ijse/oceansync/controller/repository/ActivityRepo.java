@@ -6,6 +6,8 @@ import lk.ijse.oceansync.model.Activity;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityRepo {
 
@@ -71,5 +73,19 @@ public class ActivityRepo {
             e.printStackTrace();
         }
         return pstm.executeUpdate() > 0;
+    }
+    public static List<String> getAllActivities() throws SQLException {
+
+        String sql = "SELECT name FROM activity";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+        List<String> acivities = new ArrayList<>();
+
+        ResultSet resultSet = pstm.executeQuery();
+        while (resultSet.next()) {
+            String name = resultSet.getString(1);
+            acivities.add(name);
+        }
+        return acivities;
     }
 }

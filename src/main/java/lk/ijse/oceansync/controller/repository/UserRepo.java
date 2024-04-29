@@ -23,7 +23,7 @@ public class UserRepo {
         while(resultSet.next()) {
             userIdList.add(resultSet.getString(1));
         }
-        System.out.print(userIdList);
+        //System.out.print(userIdList);
         return userIdList;
     }
     public static User userSearchById(String id) throws SQLException {

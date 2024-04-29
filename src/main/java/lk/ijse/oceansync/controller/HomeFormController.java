@@ -19,6 +19,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.time.LocalDateTime;
+
+import static lk.ijse.oceansync.controller.LoginFormController.credential;
+
 public class HomeFormController {
 
     @FXML
@@ -125,8 +129,22 @@ public class HomeFormController {
         return activityCount;
     }
 
+
+
     private void setDayStatus() {
-            LocalDateTime now = LocalDateTime.now();
-            lblDayStatus.setText(String.valueOf(now));
+        LocalDateTime now = LocalDateTime.now();
+        int hour = now.getHour();
+        String status;
+
+        if (hour >= 5 && hour < 12) {
+            status = "Morning ";
+        } else if (hour >= 12 && hour < 18) {
+            status = "Afternoon ";
+        } else {
+            status = "Evening ";
+        }
+
+        lblDayStatus.setText(status+credential[1]);
     }
+
 }

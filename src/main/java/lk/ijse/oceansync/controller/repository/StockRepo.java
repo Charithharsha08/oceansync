@@ -3,6 +3,7 @@ package lk.ijse.oceansync.controller.repository;
 import lk.ijse.oceansync.db.DbConnection;
 import lk.ijse.oceansync.model.Stock;
 
+import javax.xml.namespace.QName;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -64,6 +65,21 @@ public class StockRepo {
 
             Stock stock = new Stock(itemId,name,type,qty,userId);
             stockList.add(stock);
+        }
+        return stockList;
+    }
+    public static List<String> getAllStock() throws SQLException {
+        String sql = "SELECT name FROM stock";
+
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+        List<String> stockList = new ArrayList<>();
+        ResultSet resultSet = pstm.executeQuery();
+
+
+        while (resultSet.next()) {
+            String name = pstm.getResultSet().getString(1);
+            stockList.add(name);
         }
         return stockList;
     }

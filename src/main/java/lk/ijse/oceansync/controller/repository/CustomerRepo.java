@@ -32,6 +32,8 @@ public class CustomerRepo {
         PreparedStatement pstm = DbConnection.getInstance().getConnection()
                 .prepareStatement(sql);
 
+
+
         ResultSet resultSet = pstm.executeQuery();
         List<Customer> customerList = new ArrayList<>();
         while (resultSet.next()){
@@ -73,5 +75,27 @@ public class CustomerRepo {
             e.printStackTrace();
         }
         return pstm.executeUpdate() > 0;
+    }
+
+
+    public static Customer getCustomerByTel(String contact) throws SQLException {
+        String sql = "SELECT * FROM customer WHERE tel = ?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+
+        pstm.setObject(1, contact);
+
+        ResultSet resultSet = pstm.executeQuery();
+        Customer customer = null;
+
+        if (resultSet.next()) {
+            String customerId = resultSet.getString(1);
+            String name = resultSet.getString(2);
+            String address = resultSet.getString(3);
+            String tel = resultSet.getString(4);
+
+            customer = new Customer(customerId, name, address, tel);
+        }
+        return customer;
     }
 }
