@@ -9,9 +9,7 @@ public class Stock {
 
     private String itemId;
     private String name;
-    private String type;
+    private double price;
     private String qty;
     private String userId;
-
-
 }

@@ -3,17 +3,9 @@ package lk.ijse.oceansync.model.tm;
 public class StockTm {
     private String itemId;
     private String name;
-    private String type;
+    private double price;
     private String qty;
     private String userId;
-
-    public StockTm(String itemId, String name, String type, String qty, String userId) {
-        this.itemId = itemId;
-        this.name = name;
-        this.type = type;
-        this.qty = qty;
-        this.userId = userId;
-    }
 
     public String getItemId() {
         return itemId;
@@ -31,12 +23,12 @@ public class StockTm {
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public double getPrice() {
+        return price;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public String getQty() {
@@ -55,12 +47,21 @@ public class StockTm {
         this.userId = userId;
     }
 
+    public StockTm(String itemId, String name, double price, String qty, String userId) {
+        this.itemId = itemId;
+        this.name = name;
+        this.price = price;
+        this.qty = qty;
+        this.userId = userId;
+
+    }
+
     @Override
     public String toString() {
         return "StockTm{" +
                 "itemId='" + itemId + '\'' +
                 ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
+                ", price=" + price +
                 ", qty='" + qty + '\'' +
                 ", userId='" + userId + '\'' +
                 '}';

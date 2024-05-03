@@ -16,7 +16,7 @@ public class Payment {
 
     private String paymentId;
     private String type;
-    private double amount;
+    private double total;
     private Date date;
     private String customerId;
 }

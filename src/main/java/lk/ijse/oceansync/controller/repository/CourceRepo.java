@@ -69,4 +69,23 @@ public class CourceRepo {
     }
 
 
+    public static Cource getCourceByCourceName(String cource) throws SQLException {
+        String sql = "SELECT * FROM cource WHERE name = ?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+        pstm.setObject(1, cource);
+        ResultSet resultSet = pstm.executeQuery();
+        String courceId = null;
+        String name = null;
+        String duration = null;
+        double cost = 0;
+        if (resultSet.next()) {
+            courceId = resultSet.getString(1);
+            name = resultSet.getString(2);
+            duration = resultSet.getString(3);
+            cost = Double.parseDouble(resultSet.getString(4));
+
+        }
+        return new Cource(courceId, name, duration, cost);
+    }
 }

@@ -12,13 +12,20 @@ public class PlacePaymentRepo {
         connection.setAutoCommit(false);
         try {
             boolean isPaymentSaved = PaymentRepo.savePayment(pp.getPayment());
+            System.out.println("Payment save " +isPaymentSaved);
             if (isPaymentSaved) {
                 boolean isSelectedCourseSaved = SelectedCourceRepo.saveSelectedCource(pp.getSelectedCources());
+                System.out.println("Selected Cource save");
                 if (isSelectedCourseSaved) {
                     boolean isPlaceSaved = SelectedActivityRepo.saveSelectedActivity(pp.getSelectedActivities());
+                    System.out.println("Selected Activity save ");
                     if (isPlaceSaved) {
-                        connection.commit();
-                        return true;
+                        boolean isStockQtyUpdate = StockRepo.updateStockQty(pp.getStocks());
+                        System.out.println("Update Stock");
+                        if (isStockQtyUpdate) {
+                            connection.commit();
+                            return true;
+                        }
                     }
                 }
 

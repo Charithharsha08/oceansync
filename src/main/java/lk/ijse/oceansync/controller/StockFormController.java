@@ -84,7 +84,7 @@ public class StockFormController {
             StockTm stockTm = new StockTm(
                     stock.getItemId(),
                     stock.getName(),
-                    stock.getType(),
+                    stock.getPrice(),
                     stock.getQty(),
                     stock.getUserId()
             );
@@ -98,7 +98,7 @@ public class StockFormController {
     private void setCellValue() {
         colItemId.setCellValueFactory(new PropertyValueFactory<>("itemId"));
         ColName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        ColType.setCellValueFactory(new PropertyValueFactory<>("type"));
+        ColType.setCellValueFactory(new PropertyValueFactory<>("price"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colUserId.setCellValueFactory(new PropertyValueFactory<>("userId"));
     }
@@ -127,7 +127,7 @@ public class StockFormController {
        String userId = cmbUserId.getValue();
        String itemId = txtItemId.getText();
        String name = txtName.getText();
-       String type = txtType.getText();
+      double price = Double.parseDouble(txtType.getText());
        String qty = txtQty.getText();
 
        if (qty.isEmpty()) {
@@ -138,7 +138,7 @@ public class StockFormController {
            new Alert(Alert.AlertType.ERROR, "Please enter name").show();
            return;
        }
-       if (type.isEmpty()) {
+       if (price == 0) {
            new Alert(Alert.AlertType.ERROR, "Please enter type").show();
            return;
        }
@@ -146,7 +146,7 @@ public class StockFormController {
            new Alert(Alert.AlertType.ERROR, "Please enter item id").show();
            return;
        }
-       Stock stock = new Stock(itemId, name, type, qty, userId);
+       Stock stock = new Stock(itemId, name, price, qty, userId);
         try {
             boolean stockSave = StockRepo.stockSave(stock);
             if (stockSave) {
@@ -205,10 +205,10 @@ public class StockFormController {
         String userId = cmbUserId.getValue();
         String itemId = txtItemId.getText();
         String name = txtName.getText();
-        String type = txtType.getText();
+        double price = Double.parseDouble(txtType.getText());
         String qty = txtQty.getText();
 
-       Stock stock =  new Stock(itemId, name, type, qty, userId);
+       Stock stock =  new Stock(itemId, name, price, qty, userId);
         try {
             StockRepo.stockUpdate(stock);
             if (itemId != null) {

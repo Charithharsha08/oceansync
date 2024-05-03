@@ -88,4 +88,27 @@ public class ActivityRepo {
         }
         return acivities;
     }
+
+    public static Activity getActivityByActivityName(String activity) throws SQLException {
+        String sql = "SELECT * FROM activity WHERE name = ?";
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+        pstm.setObject(1, activity);
+        ResultSet resultSet = pstm.executeQuery();
+
+        String activityId = null;
+        String name = null;
+        String type = null;
+        String location = null;
+        double cost = 0;
+        if (resultSet.next()) {
+            activityId = resultSet.getString(1);
+            name = resultSet.getString(2);
+            type = resultSet.getString(3);
+            location = resultSet.getString(4);
+            cost = resultSet.getDouble(5);
+
+        }
+        return new Activity(activityId, name, type, location, cost);
+    }
 }
