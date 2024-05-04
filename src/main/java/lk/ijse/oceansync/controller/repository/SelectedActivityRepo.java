@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SelectedActivityRepo {
     public static boolean saveSelectedActivity(List<SelectedActivity> selectedActivities) {
+        System.out.println("selected activity ekat awa ");
         String sql = "INSERT INTO selectedactivity VALUES(?,?,?)";
         try {
             PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(sql);

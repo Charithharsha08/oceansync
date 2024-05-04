@@ -1,6 +1,7 @@
 package lk.ijse.oceansync.controller.repository;
 
 import lk.ijse.oceansync.db.DbConnection;
+import lk.ijse.oceansync.model.SelectedStock;
 import lk.ijse.oceansync.model.Stock;
 
 import java.sql.PreparedStatement;
@@ -124,6 +125,21 @@ public class StockRepo {
                     .prepareStatement(sql);
             pstm.setObject(1, stocks.getQty());
             pstm.setObject(2, stocks.getItemId());
+
+            return pstm.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public static boolean updateStockQtyOnHand(List<SelectedStock> selectedStocks){
+        System.out.println(selectedStocks);
+        String sql = "UPDATE stock SET qty=? WHERE itemId=?";
+        try {
+            PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                    .prepareStatement(sql);
+           // pstm.setObject(1, selectedStocks.());
+            pstm.setObject(2, selectedStocks.getClass());
 
             return pstm.executeUpdate() > 0;
         } catch (SQLException e) {

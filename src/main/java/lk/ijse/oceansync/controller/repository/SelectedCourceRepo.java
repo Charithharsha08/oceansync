@@ -9,7 +9,8 @@ import java.util.List;
 
 public class SelectedCourceRepo {
     public static boolean saveSelectedCource(List<SelectedCource> selectedCources)  {
-       String sql = "INSERT INTO selectedcource VALUES(?,?,?)";
+        System.out.println("selected cource repo eke save ekt awa");
+       String sql = "INSERT INTO selectedcource VALUES(?,?)";
        try {
            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(sql);
            for (SelectedCource selectedCource : selectedCources) {

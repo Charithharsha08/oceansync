@@ -39,18 +39,21 @@ public class PaymentRepo {
         return null;
     }
 
-    public static boolean savePayment(Payment payment) {
-        String sql = "INSERT INTO payment VALUES (?,?,?,?)";
-        try {
-            PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement(sql);
-            stm.setObject(1, payment.getPaymentId());
-            stm.setObject(2, payment.getType());
-            stm.setObject(3, payment.getDate());
-            stm.setObject(4, payment.getCustomerId());
+    public static boolean savePayment(Payment payment) throws SQLException {
+        System.out.println("Save payment ekatath awa");
+        System.out.println(payment);
+        String sql = "INSERT INTO payment VALUES (?,?,?,?,?)";
 
-            return stm.executeUpdate() > 0;
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        PreparedStatement pstm = DbConnection.getInstance().getConnection()
+                .prepareStatement(sql);
+            pstm.setObject(1, payment.getPaymentId());
+            pstm.setObject(2, payment.getType());
+            pstm.setObject(3,payment.getTotal());
+            pstm.setObject(4, payment.getDate());
+            pstm.setObject(5, payment.getCustomerId());
+
+
+        System.out.println((pstm.executeUpdate() > 0 )+ "  save uand ndaa");
+        return pstm.executeUpdate() > 0;
     }
 }

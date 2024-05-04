@@ -13,5 +13,5 @@ public class PlacePayment {
     private Payment payment;
     private List<SelectedActivity> selectedActivities;
     private List<SelectedCource> selectedCources;
-    private List<Stock> stocks;
+    private List<SelectedStock> selectedStocks;
 }

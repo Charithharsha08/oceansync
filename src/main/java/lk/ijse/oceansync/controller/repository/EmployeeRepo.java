@@ -10,6 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static lk.ijse.oceansync.controller.LoginFormController.credential;
+
 public class EmployeeRepo {
 
     public static boolean employeeSave(Employee employee) throws SQLException {
@@ -24,9 +26,8 @@ public class EmployeeRepo {
         pstm.setObject(5, employee.getMonth());
         pstm.setObject(6, employee.getSalary());
         pstm.setObject(7, employee.getDate());
-        pstm.setObject(8, employee.getUserId());
-
-
+       // pstm.setObject(8, employee.getUserId());
+        pstm.setObject(8,credential[0]);
         return pstm.executeUpdate() > 0;
     }
 

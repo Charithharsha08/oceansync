@@ -483,26 +483,33 @@ public class PaymentFormController {
 
         var payment = new Payment(paymentId, type, total, date, customerId);
 
-        String gettedId = "null";
-        char[] charArray = gettedId.toCharArray();
+
         List<SelectedActivity> selectedActivities = new ArrayList<>();
         List<SelectedCource> selectedCources = new ArrayList<>();
+        List<SelectedStock> selectedStocks = new ArrayList<>();
 
         for (int i = 0; i < tblPayment.getItems().size(); i++) {
             PaymentTm tm = tblPayment.getItems().get(i);
-            gettedId = tm.getPaymentId();
+            char[] charArray = tm.getPaymentId().toCharArray();
             if (charArray[0] == 'A') {
                 SelectedActivity sAct = new SelectedActivity(
                         tm.getPaymentId(),
                         customerId);
                 selectedActivities.add(sAct);
+               // System.out.println("A");
             } else if (charArray[0] == 'C') {
                 SelectedCource sCource = new SelectedCource(
                         tm.getPaymentId(),
                         customerId);
                 selectedCources.add(sCource);
+              //  System.out.println("C");
             } else if (charArray[0] == 'S') {
+                     SelectedStock sStock = new SelectedStock(
+                             tm.getPaymentId(),
+                             tm.getQty());
 
+                     selectedStocks.add(sStock);
+               // System.out.println("S");
             }
         }
 
@@ -517,7 +524,20 @@ public class PaymentFormController {
 //            selectedActivities.add(sAct);
 //        }
 
-       // PlacePayment placePayment = new PlacePayment(payment, selectedActivities, null, null);
+        PlacePayment placePayments = new PlacePayment(payment,selectedActivities,selectedCources,selectedStocks);
+        try {
+            boolean isSaved = PlacePaymentRepo.placePayment(placePayments);
+            System.out.println("Is saved placed payment");
+            if (isSaved){
+                new Alert(Alert.AlertType.INFORMATION, "Payment Saved").showAndWait();
+
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Payment Not Saved").showAndWait();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).showAndWait();
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
