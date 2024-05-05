@@ -11,7 +11,7 @@ public class PlacePaymentRepo {
     public static boolean placePayment(PlacePayment pp) throws SQLException {
         System.out.println("awa");
         Connection connection = DbConnection.getInstance().getConnection();
-        connection.setAutoCommit(false);
+       // connection.setAutoCommit(false);
         try {
             //System.out.println(pp.getPayment());
             boolean isPaymentSaved = PaymentRepo.savePayment(pp.getPayment());
@@ -37,6 +37,7 @@ public class PlacePaymentRepo {
             connection.rollback();
             return false;
         }catch (Exception e) {
+            System.out.println("catch eka athulata awa");
             connection.rollback();
             return false;
         }finally {

@@ -4,102 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="create backend PaymentFormController">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedStock.java" afterDir="false" />
+    <list default="true" id="6e3df653-c22d-4518-9ada-779c338cf8e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/270376eb-ded5-4d0a-81b8-096bf1aefe1d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/270376eb-ded5-4d0a-81b8-096bf1aefe1d/storage_v2/_src_/schema/oceansync.mSRgAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/PaymentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/PaymentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/EmployeeRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/EmployeeRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PaymentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PlacePaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PlacePaymentRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedActivityRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedActivityRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedCourceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedCourceRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/StockRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/StockRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/PlacePayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/PlacePayment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="Enum" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Charithharsha08&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Charithharsha08/oceansync.git&quot;,
-    &quot;accountId&quot;: &quot;06237f84-6968-4305-bbfd-f908d1fbd0ba&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2eiPkKuPWq21yNku8MRz5nF6Co7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2g0wb8cBr7CukbjIF14SFyb0Nd3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LauncherWrapper.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/charith/IdeaProjects/oceansync/src/main/resources/asserts/icon/images&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.LauncherWrapper.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="lk.ijse.oceansync.controller.repository" />
-      <recent name="lk.ijse.oceansync.model" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/asserts/icon/images" />
-      <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon" />
-      <recent name="$PROJECT_DIR$/src/main/resources/view/asserts/icon/images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/" />
-      <recent name="$PROJECT_DIR$/src/main/resources/asserts" />
-      <recent name="$PROJECT_DIR$/src/main/resources/view/asserts" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration name="LauncherWrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lk.ijse.oceansync.LauncherWrapper" />
@@ -131,389 +78,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="437dfb24-e238-425c-aafc-8aba4ca26b39" name="Changes" comment="" />
-      <created>1712384569114</created>
+      <changelist id="6e3df653-c22d-4518-9ada-779c338cf8e8" name="Changes" comment="" />
+      <created>1714847873293</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712384569114</updated>
-      <workItem from="1712384570534" duration="10000" />
-      <workItem from="1713035540854" duration="144000" />
-      <workItem from="1713035729321" duration="35000" />
-      <workItem from="1713075316021" duration="25000" />
-      <workItem from="1713075437970" duration="337000" />
-      <workItem from="1713098588877" duration="3569000" />
-      <workItem from="1713147707750" duration="4480000" />
-      <workItem from="1713163851622" duration="5193000" />
-      <workItem from="1713170241417" duration="5572000" />
-      <workItem from="1713187243960" duration="4998000" />
-      <workItem from="1713194503115" duration="463000" />
-      <workItem from="1713197054709" duration="130000" />
-      <workItem from="1713252551243" duration="10335000" />
-      <workItem from="1713267246067" duration="357000" />
-      <workItem from="1713287282317" duration="1169000" />
-      <workItem from="1713408950033" duration="1074000" />
-      <workItem from="1713416334839" duration="42000" />
-      <workItem from="1713416545085" duration="141000" />
-      <workItem from="1713419334026" duration="1054000" />
-      <workItem from="1713420983408" duration="7009000" />
-      <workItem from="1713430512038" duration="1515000" />
-      <workItem from="1713437280453" duration="1850000" />
-      <workItem from="1713439901205" duration="910000" />
-      <workItem from="1713441231237" duration="13644000" />
-      <workItem from="1713456376846" duration="84000" />
-      <workItem from="1713477918712" duration="6606000" />
-      <workItem from="1713503008823" duration="194000" />
-      <workItem from="1713503413446" duration="4803000" />
-      <workItem from="1713513247735" duration="6855000" />
-      <workItem from="1713631061341" duration="3877000" />
-      <workItem from="1713671309462" duration="1254000" />
-      <workItem from="1713694459787" duration="13900000" />
-      <workItem from="1713709740879" duration="4608000" />
-      <workItem from="1713716592298" duration="4697000" />
-      <workItem from="1713762170157" duration="1695000" />
-      <workItem from="1713775806907" duration="8506000" />
-      <workItem from="1713790893669" duration="7333000" />
-      <workItem from="1713799686272" duration="5303000" />
-      <workItem from="1713843680563" duration="18966000" />
-      <workItem from="1713865896709" duration="859000" />
-      <workItem from="1713867623146" duration="13354000" />
-      <workItem from="1713926751315" duration="1164000" />
-      <workItem from="1713928751063" duration="1271000" />
-      <workItem from="1713936678263" duration="155000" />
-      <workItem from="1713937734513" duration="660000" />
-      <workItem from="1713938488088" duration="344000" />
-      <workItem from="1713941239406" duration="762000" />
-      <workItem from="1714007883030" duration="2182000" />
-      <workItem from="1714014209327" duration="10675000" />
-      <workItem from="1714044324678" duration="1591000" />
-      <workItem from="1714233975699" duration="2450000" />
-      <workItem from="1714323267551" duration="462000" />
-      <workItem from="1714323879352" duration="739000" />
-      <workItem from="1714357484126" duration="4191000" />
-      <workItem from="1714364876409" duration="16580000" />
-      <workItem from="1714383519741" duration="90000" />
-      <workItem from="1714397978862" duration="14478000" />
-      <workItem from="1714455185915" duration="1041000" />
-      <workItem from="1714456618154" duration="2132000" />
-      <workItem from="1714542669035" duration="1202000" />
-      <workItem from="1714646864064" duration="11000" />
-      <workItem from="1714646897126" duration="946000" />
-      <workItem from="1714647879915" duration="21243000" />
-      <workItem from="1714705074347" duration="10463000" />
-      <workItem from="1714724055481" duration="11782000" />
-      <workItem from="1714750877537" duration="4404000" />
-      <workItem from="1714793339230" duration="335000" />
-      <workItem from="1714803199332" duration="1094000" />
-      <workItem from="1714809760068" duration="5587000" />
-      <workItem from="1714836142244" duration="5953000" />
-      <workItem from="1714843517244" duration="1512000" />
+      <updated>1714847873293</updated>
+      <workItem from="1714847879893" duration="192000" />
+      <workItem from="1714875866304" duration="3120000" />
     </task>
-    <task id="LOCAL-00001" summary="change vcs">
-      <option name="closed" value="true" />
-      <created>1713075491612</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1713075491612</updated>
-    </task>
-    <task id="LOCAL-00002" summary="change vcs">
-      <option name="closed" value="true" />
-      <created>1713098614782</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713098614782</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add icon and bg image">
-      <option name="closed" value="true" />
-      <created>1713154131878</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713154131878</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add pdi-logo.png">
-      <option name="closed" value="true" />
-      <created>1713163890405</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1713163890405</updated>
-    </task>
-    <task id="LOCAL-00005" summary="create backend in LoginFormController">
-      <option name="closed" value="true" />
-      <created>1713170447220</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713170447220</updated>
-    </task>
-    <task id="LOCAL-00006" summary="create backend in RegistrationFormController">
-      <option name="closed" value="true" />
-      <created>1713176583227</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713176583227</updated>
-    </task>
-    <task id="LOCAL-00007" summary="create backend in RegistrationFormController">
-      <option name="closed" value="true" />
-      <created>1713267595474</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713267595474</updated>
-    </task>
-    <task id="LOCAL-00008" summary="create backend in RegistrationFormController">
-      <option name="closed" value="true" />
-      <created>1713422313834</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713422313835</updated>
-    </task>
-    <task id="LOCAL-00009" summary="create backend in RegistrationFormController">
-      <option name="closed" value="true" />
-      <created>1713430147569</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1713430147569</updated>
-    </task>
-    <task id="LOCAL-00010" summary="create backend">
-      <option name="closed" value="true" />
-      <created>1713440770016</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1713440770016</updated>
-    </task>
-    <task id="LOCAL-00011" summary="create backend">
-      <option name="closed" value="true" />
-      <created>1713446488611</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1713446488611</updated>
-    </task>
-    <task id="LOCAL-00012" summary="create backend in HomeFormController">
-      <option name="closed" value="true" />
-      <created>1713451039859</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1713451039859</updated>
-    </task>
-    <task id="LOCAL-00013" summary="create backend in Stock">
-      <option name="closed" value="true" />
-      <created>1713671542622</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1713671542622</updated>
-    </task>
-    <task id="LOCAL-00014" summary="create backend in Employee">
-      <option name="closed" value="true" />
-      <created>1713701751540</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1713701751540</updated>
-    </task>
-    <task id="LOCAL-00015" summary="create backend in Employee">
-      <option name="closed" value="true" />
-      <created>1713708676195</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713708676195</updated>
-    </task>
-    <task id="LOCAL-00016" summary="create backend in Employee">
-      <option name="closed" value="true" />
-      <created>1713708805337</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713708805337</updated>
-    </task>
-    <task id="LOCAL-00017" summary="create backend in DiscountFormController">
-      <option name="closed" value="true" />
-      <created>1713844788017</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1713844788017</updated>
-    </task>
-    <task id="LOCAL-00018" summary="create backend in DiscountFormController">
-      <option name="closed" value="true" />
-      <created>1713859458292</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1713859458292</updated>
-    </task>
-    <task id="LOCAL-00019" summary="create backend in ActivityFormController">
-      <option name="closed" value="true" />
-      <created>1713868758860</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1713868758860</updated>
-    </task>
-    <task id="LOCAL-00020" summary="create backend in CourceRepo">
-      <option name="closed" value="true" />
-      <created>1713873420976</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1713873420976</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Create discount Class">
-      <option name="closed" value="true" />
-      <created>1713873908893</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1713873908893</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Create discount DiscountFormController.java">
-      <option name="closed" value="true" />
-      <created>1713882794799</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1713882794799</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Create Cource.java">
-      <option name="closed" value="true" />
-      <created>1713927252292</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1713927252292</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Create Cource.java">
-      <option name="closed" value="true" />
-      <created>1713928769265</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1713928769265</updated>
-    </task>
-    <task id="LOCAL-00025" summary="change is empty value check">
-      <option name="closed" value="true" />
-      <created>1713941972072</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1713941972072</updated>
-    </task>
-    <task id="LOCAL-00026" summary="add loading form">
-      <option name="closed" value="true" />
-      <created>1714025224643</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1714025224643</updated>
-    </task>
-    <task id="LOCAL-00027" summary="delete loading form">
-      <option name="closed" value="true" />
-      <created>1714360878931</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1714360878931</updated>
-    </task>
-    <task id="LOCAL-00028" summary="create loading form controller">
-      <option name="closed" value="true" />
-      <created>1714360903369</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1714360903369</updated>
-    </task>
-    <task id="LOCAL-00029" summary="add action for login_form.fxml">
-      <option name="closed" value="true" />
-      <created>1714367958726</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1714367958726</updated>
-    </task>
-    <task id="LOCAL-00030" summary="create backend PaymentFormController">
-      <option name="closed" value="true" />
-      <created>1714383559640</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1714383559640</updated>
-    </task>
-    <task id="LOCAL-00031" summary="create backend PaymentFormController">
-      <option name="closed" value="true" />
-      <created>1714414579674</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1714414579675</updated>
-    </task>
-    <task id="LOCAL-00032" summary="create backend PaymentFormController">
-      <option name="closed" value="true" />
-      <created>1714735773027</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735773027</updated>
-    </task>
-    <task id="LOCAL-00033" summary="create backend PaymentFormController">
-      <option name="closed" value="true" />
-      <created>1714735790231</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1714735790231</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="change vcs" />
-    <MESSAGE value="add icon and bg image" />
-    <MESSAGE value="add pdi-logo.png" />
-    <MESSAGE value="create backend in LoginFormController" />
-    <MESSAGE value="create backend in RegistrationFormController" />
-    <MESSAGE value="create backend" />
-    <MESSAGE value="create backend in HomeFormController" />
-    <MESSAGE value="create backend in Stock" />
-    <MESSAGE value="create backend in Employee" />
-    <MESSAGE value="create backend in DiscountFormController" />
-    <MESSAGE value="create backend in ActivityFormController" />
-    <MESSAGE value="create backend in CourceRepo" />
-    <MESSAGE value="Create discount Class" />
-    <MESSAGE value="Create discount DiscountFormController.java" />
-    <MESSAGE value="Create Cource.java" />
-    <MESSAGE value="change is empty value check" />
-    <MESSAGE value="add loading form" />
-    <MESSAGE value="delete loading form" />
-    <MESSAGE value="create loading form controller" />
-    <MESSAGE value="add action for login_form.fxml" />
-    <MESSAGE value="create backend PaymentFormController" />
-    <option name="LAST_COMMIT_MESSAGE" value="create backend PaymentFormController" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NumberFormatException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
