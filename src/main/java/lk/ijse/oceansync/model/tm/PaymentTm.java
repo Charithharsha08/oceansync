@@ -9,20 +9,9 @@ public class PaymentTm {
     private String description;
     private double unitPrice;
     private int qty;
-    private int discount;
+    private double discount;
     private double total;
     private JFXButton btn;
-
-    public PaymentTm(String paymentId, String name, String description, double unitPrice, int qty, int discount, double total, JFXButton btn) {
-        this.paymentId = paymentId;
-        this.name = name;
-        this.description = description;
-        this.unitPrice = unitPrice;
-        this.qty = qty;
-        this.discount = discount;
-        this.total = total;
-        this.btn = btn;
-    }
 
     public String getPaymentId() {
         return paymentId;
@@ -64,11 +53,11 @@ public class PaymentTm {
         this.qty = qty;
     }
 
-    public int getDiscount() {
+    public double getDiscount() {
         return discount;
     }
 
-    public void setDiscount(int discount) {
+    public void setDiscount(double discount) {
         this.discount = discount;
     }
 
@@ -85,6 +74,17 @@ public class PaymentTm {
     }
 
     public void setBtn(JFXButton btn) {
+        this.btn = btn;
+    }
+
+    public PaymentTm(String paymentId, String name, String description, double unitPrice, int qty, double discount, double total, JFXButton btn) {
+        this.paymentId = paymentId;
+        this.name = name;
+        this.description = description;
+        this.unitPrice = unitPrice;
+        this.qty = qty;
+        this.discount = discount;
+        this.total = total;
         this.btn = btn;
     }
 }

@@ -55,8 +55,8 @@ public class PaymentRepo {
             pstm.setObject(4, payment.getDate());
             pstm.setObject(5, payment.getCustomerId());
 
-
-            System.out.println((pstm.executeUpdate() > 0 )+ "  save uand ndaa");
+            System.out.println(payment.getPaymentId());
+            System.out.println("save uand ndaa");
             return pstm.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();

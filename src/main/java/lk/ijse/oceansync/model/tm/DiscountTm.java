@@ -4,13 +4,7 @@ public class DiscountTm {
 
    private String discountId;
    private String type;
-   private int discount;
-
-   public DiscountTm(String discountId, String type, int discount) {
-      this.discountId = discountId;
-      this.type = type;
-      this.discount = discount;
-   }
+   private double discount;
 
    public String getDiscountId() {
       return discountId;
@@ -28,11 +22,17 @@ public class DiscountTm {
       this.type = type;
    }
 
-   public int getDiscount() {
+   public double getDiscount() {
       return discount;
    }
 
-   public void setDiscount(int discount) {
+   public void setDiscount(double discount) {
+      this.discount = discount;
+   }
+
+   public DiscountTm(String discountId, String type, double discount) {
+      this.discountId = discountId;
+      this.type = type;
       this.discount = discount;
    }
 }

@@ -121,7 +121,7 @@ public class DiscountFormController {
             new Alert(Alert.AlertType.ERROR, "Please enter discount").show();
             return;
         }
-        int discount = Integer.parseInt(txtDiscount.getText());
+        double discount = Double.parseDouble(txtDiscount.getText());
         Discount discount1 = new Discount(discountId, typeAsString, discount);
         try {
             boolean discountSave = DiscountRepo.discountSave(discount1);

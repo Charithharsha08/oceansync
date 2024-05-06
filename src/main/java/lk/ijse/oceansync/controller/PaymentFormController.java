@@ -25,13 +25,14 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 public class PaymentFormController {
 
     @FXML
-    private JFXComboBox<String> cmbDiscount;
+    private JFXComboBox<Double> cmbDiscount;
 
     @FXML
     private JFXComboBox<String> cmbSelectedActivity;
@@ -159,10 +160,10 @@ public class PaymentFormController {
     }
 
     private void loadAllDiscounts() {
-        ObservableList<String> discounts = FXCollections.observableArrayList();
+        ObservableList<Double> discounts = FXCollections.observableArrayList();
         try {
-            List<String> discount = DiscountRepo.getDiscount();
-            for (String name : discount) {
+            List<Double> discount = DiscountRepo.getDiscount();
+            for (Double name : discount) {
                 discounts.add(name);
             }
             cmbDiscount.setItems(discounts);
@@ -206,13 +207,15 @@ public class PaymentFormController {
 
     private static String nextId(String currentId) {
         if (currentId != null) {
-            String[] split = currentId.split("O");
-//            System.out.println("Arrays.toString(split) = " + Arrays.toString(split));
+           // String[] split = currentId.split("O");
+            String[] split = currentId.split("P");
+           System.out.println("Arrays.toString(split) = " + Arrays.toString(split));
+           System.out.println("Arrays.toString(split) = " + split[0]);
             int id = Integer.parseInt(split[1]);    //2
-            return "O" + ++id;
+            return "P" + ++id;
 
         }
-        return "O1";
+        return "P1";
     }
 
     private void loadAllCources() {
@@ -256,14 +259,15 @@ public class PaymentFormController {
             qty = Integer.parseInt(txtQty.getText());
         }
 //        int discount = Integer.parseInt(cmbDiscount.getValue());
-        int discount;
+        double discount;
         if (cmbDiscount.getValue() == null) {
             discount = 0;
         } else {
-            discount = Integer.parseInt(cmbDiscount.getValue());
+            discount = Double.parseDouble(String.valueOf(cmbDiscount.getValue()));
         }
 
         double total = qty * unitPrice;
+        total -= total * (discount/100);
         if (customerName.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please select a customer").show();
             return;
@@ -332,13 +336,14 @@ public class PaymentFormController {
         } else {
             qty = Integer.parseInt(txtQty.getText());
         }
-        int discount;
+        double discount;
         if (cmbDiscount.getValue() == null) {
             discount = 0;
         } else {
-            discount = Integer.parseInt(cmbDiscount.getValue());
+            discount = Double.parseDouble(String.valueOf(cmbDiscount.getValue()));
         }
         double total = qty * unitPrice;
+        total -= total * (discount/100);
         if (customerName.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please select a customer").show();
             return;
@@ -395,13 +400,14 @@ public class PaymentFormController {
         } else {
             qty = Integer.parseInt(txtQty.getText());
         }
-        int discount;
+        double discount;
         if (cmbDiscount.getValue() == null) {
             discount = 0;
         } else {
-            discount = Integer.parseInt(cmbDiscount.getValue());
+            discount = Double.parseDouble(String.valueOf(cmbDiscount.getValue()));
         }
         double total = qty * unitPrice;
+        total -= total * (discount/100);
         if (customerName.isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please select a customer").show();
             return;
@@ -480,13 +486,14 @@ public class PaymentFormController {
         double total = Double.parseDouble(lblNetTotal.getText());
         Date date = Date.valueOf(lblDate.getText());
         String customerId = txtCustomerId.getText();
+        String stockId = lblStockId.getText();
 
         var payment = new Payment(paymentId, type, total, date, customerId);
 
 
         List<SelectedActivity> selectedActivities = new ArrayList<>();
         List<SelectedCource> selectedCources = new ArrayList<>();
-        List<SelectedStock> selectedStocks = new ArrayList<>();
+        SelectedStock sStock = null;
 
         for (int i = 0; i < tblPayment.getItems().size(); i++) {
             PaymentTm tm = tblPayment.getItems().get(i);
@@ -494,21 +501,28 @@ public class PaymentFormController {
             if (charArray[0] == 'A') {
                 SelectedActivity sAct = new SelectedActivity(
                         tm.getPaymentId(),
-                        customerId);
+                        customerId,
+                        Date.valueOf(lblDate.getText()));
                 selectedActivities.add(sAct);
                // System.out.println("A");
             } else if (charArray[0] == 'C') {
                 SelectedCource sCource = new SelectedCource(
+                        customerId,
                         tm.getPaymentId(),
-                        customerId);
+                        Date.valueOf(lblDate.getText())
+                );
                 selectedCources.add(sCource);
               //  System.out.println("C");
             } else if (charArray[0] == 'S') {
-                     SelectedStock sStock = new SelectedStock(
-                             tm.getPaymentId(),
-                             tm.getQty());
+                 sStock = new SelectedStock(
+                        stockId,
+                        tm.getQty(),
+                        customerId,
+                        paymentId,
+                        Date.valueOf(lblDate.getText())
+                );
 
-                     selectedStocks.add(sStock);
+
                // System.out.println("S");
             }
         }
@@ -524,9 +538,10 @@ public class PaymentFormController {
 //            selectedActivities.add(sAct);
 //        }
 
-        PlacePayment placePayments = new PlacePayment(payment,selectedActivities,selectedCources,selectedStocks);
+        PlacePayment placePayments = new PlacePayment(payment,selectedActivities,selectedCources,sStock);
         try {
             boolean isSaved = PlacePaymentRepo.placePayment(placePayments);
+            System.out.println(isSaved);
             System.out.println("Is saved placed payment");
             if (isSaved){
                 new Alert(Alert.AlertType.INFORMATION, "Payment Saved").showAndWait();

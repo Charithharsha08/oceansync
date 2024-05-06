@@ -20,7 +20,7 @@ public class DiscountRepo {
         while (resultSet.next()) {
             String discountId = resultSet.getString(1);
            String type = resultSet.getString(2);
-            int discount = resultSet.getInt(3);
+            double discount = resultSet.getInt(3);
 
             Discount discount1 = new Discount(discountId, type, discount);
            // Discount discount1 = new Discount(discount);
@@ -83,21 +83,21 @@ public class DiscountRepo {
         return pstm.executeUpdate() > 0;
 
     }
-    public static List<String> getDiscount() throws SQLException {
+    public static List<Double> getDiscount() throws SQLException {
         String sql = "SELECT discount FROM discount";
         PreparedStatement pstm = DbConnection.getInstance().getConnection()
                 .prepareStatement(sql);
 
         ResultSet resultSet = pstm.executeQuery();
-        List<String> discountList = new ArrayList<>();
+        List<Double> discountList = new ArrayList<>();
         while (resultSet.next()) {
             //String discountId = resultSet.getString(1);
             //String type = resultSet.getString(2);
-            int discount = resultSet.getInt(1);
+            double discount = resultSet.getInt(1);
 
            // Discount discount1 = new Discount(discountId, type, discount);
            // Discount discount1 = new Discount(discount);
-            discountList.add(String.valueOf(discount));
+            discountList.add(discount);
         }
         return discountList;
     }

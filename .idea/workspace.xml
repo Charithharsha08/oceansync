@@ -4,25 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e3df653-c22d-4518-9ada-779c338cf8e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/270376eb-ded5-4d0a-81b8-096bf1aefe1d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/270376eb-ded5-4d0a-81b8-096bf1aefe1d/storage_v2/_src_/schema/oceansync.mSRgAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+    <list default="true" id="6e3df653-c22d-4518-9ada-779c338cf8e8" name="Changes" comment="add database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedStockRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DiscountFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/DiscountFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/PaymentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/PaymentFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/DiscountRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/DiscountRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PaymentRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PlacePaymentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/PlacePaymentRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedActivityRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedActivityRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedCourceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/SelectedCourceRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/StockRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/controller/repository/StockRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/PlacePayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/PlacePayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedCource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedCource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/SelectedStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/DiscountTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/DiscountTm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/PaymentTm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/oceansync/model/tm/PaymentTm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Charithharsha08&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Charithharsha08/oceansync.git&quot;,
+    &quot;accountId&quot;: &quot;06237f84-6968-4305-bbfd-f908d1fbd0ba&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -32,21 +59,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LauncherWrapper.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LauncherWrapper.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="LauncherWrapper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lk.ijse.oceansync.LauncherWrapper" />
@@ -84,11 +116,35 @@
       <option name="presentableId" value="Default" />
       <updated>1714847873293</updated>
       <workItem from="1714847879893" duration="192000" />
-      <workItem from="1714875866304" duration="3120000" />
+      <workItem from="1714875866304" duration="6901000" />
+      <workItem from="1714968161680" duration="11067000" />
+      <workItem from="1714980595004" duration="10515000" />
     </task>
+    <task id="LOCAL-00001" summary="change PaymentRepo.java">
+      <option name="closed" value="true" />
+      <created>1714882058557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714882058557</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add database">
+      <option name="closed" value="true" />
+      <created>1714882486210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714882486210</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change PaymentRepo.java" />
+    <MESSAGE value="add database" />
+    <option name="LAST_COMMIT_MESSAGE" value="add database" />
   </component>
 </project>

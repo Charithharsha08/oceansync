@@ -118,6 +118,7 @@ public class StockRepo {
     }
 
     public static boolean updateStockQty(Stock stocks) {
+        System.out.println(stocks.toString());
 
         String sql = "UPDATE stock SET qty=? WHERE itemId=?";
         try {
@@ -132,14 +133,15 @@ public class StockRepo {
         }
         return false;
     }
-    public static boolean updateStockQtyOnHand(List<SelectedStock> selectedStocks){
+    public static boolean updateStockQtyOnHand(SelectedStock selectedStocks){
         System.out.println(selectedStocks);
-        String sql = "UPDATE stock SET qty=? WHERE itemId=?";
+        String sql = "UPDATE stock SET qty = qty - ? WHERE itemId = ?";
         try {
             PreparedStatement pstm = DbConnection.getInstance().getConnection()
                     .prepareStatement(sql);
-           // pstm.setObject(1, selectedStocks.());
-            pstm.setObject(2, selectedStocks.getClass());
+            pstm.setObject(1, selectedStocks.getQty());
+            pstm.setObject(2, selectedStocks.getItemId());
+
 
             return pstm.executeUpdate() > 0;
         } catch (SQLException e) {

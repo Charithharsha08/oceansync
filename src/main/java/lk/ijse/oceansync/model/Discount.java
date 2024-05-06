@@ -9,9 +9,6 @@ import lombok.*;
 public class Discount {
     private String discountId;
     private String type;
-    private int discount;
+    private double discount;
 
-    public Discount(int discount) {
-        this.discount = discount;
-    }
 }
